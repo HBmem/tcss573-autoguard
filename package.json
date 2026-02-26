@@ -1,0 +1,12 @@
+{
+    "name": "tcss573-autoguard",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "autoguard.json",
+            "credentialsFile": "autoguard_cred.json"
+        }
+    }
+}
