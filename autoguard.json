@@ -8,28 +8,34 @@
         "env": []
     },
     {
-        "id": "d81a2bc9ceaded32",
-        "type": "inject",
+        "id": "39a26b0701f6dc74",
+        "type": "grovepi-ultrasonic",
         "z": "2a4fc5d1f79a22e6",
-        "name": "Test",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 180,
+        "name": "Distance Sensor",
+        "mode": "timer",
+        "interval": 1,
+        "unit": "s",
+        "pin": "5",
+        "sensorname": "Ultrasonic Ranger",
+        "sensorid": "grovepi.ultrasonic-ranger.1",
+        "x": 380,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8a7ccf3a2a720f6",
+        "type": "grovepi-dht11",
+        "z": "2a4fc5d1f79a22e6",
+        "name": "Temp & Humdity Sensor",
+        "interval": 1,
+        "unit": "s",
+        "pin": "7",
+        "sensorname": "DHT11",
+        "sensorid": "dht11.1",
+        "x": 410,
+        "y": 460,
         "wires": [
             []
         ]
