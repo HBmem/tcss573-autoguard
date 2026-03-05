@@ -48,11 +48,12 @@
             "a5af3db4d8f8e61d",
             "f82d905a91cb1b3c",
             "fc4d1caf9b1bc6ee",
-            "a3ade164d56a23f5"
+            "a3ade164d56a23f5",
+            "5df9e2947c50bc28"
         ],
         "x": 74,
-        "y": 839,
-        "w": 712,
+        "y": 879,
+        "w": 752,
         "h": 122
     },
     {
@@ -74,12 +75,14 @@
             "273d1b3b25b4a7c2",
             "3a427980db1f8657",
             "40237f028d37fd7e",
-            "f9048585096b9edc"
+            "f9048585096b9edc",
+            "73a843a849fe864e",
+            "e4e65d3a72430536"
         ],
         "x": 74,
         "y": 599,
-        "w": 672,
-        "h": 202
+        "w": 692,
+        "h": 242
     },
     {
         "id": "bf9eea5de98d608c",
@@ -98,11 +101,12 @@
             "24b93fc3dd7f26d8",
             "8a1ee34ddedd8c29",
             "0ff161bb8dacb2e6",
-            "109cb88adecddf64"
+            "109cb88adecddf64",
+            "40709983bc62211e"
         ],
         "x": 74,
         "y": 439,
-        "w": 562,
+        "w": 772,
         "h": 122
     },
     {
@@ -122,11 +126,12 @@
             "34d1e37fcea063c8",
             "952d10bea95a8432",
             "cb69ba197868d977",
-            "c152b12ccd4d4622"
+            "c152b12ccd4d4622",
+            "d4cb48e6c3e72f59"
         ],
         "x": 74,
         "y": 279,
-        "w": 652,
+        "w": 712,
         "h": 122
     },
     {
@@ -172,7 +177,8 @@
             "1cf7dbea8b669802",
             "63ddb045127b5f3e",
             "0d6fc5154e026fa1",
-            "f87441ab2684d4bd"
+            "f87441ab2684d4bd",
+            "7effca276f1298eb"
         ],
         "x": 894,
         "y": 279,
@@ -202,12 +208,16 @@
             "369b20bf741f25f8",
             "107f5053e5127f4a",
             "9f10f25ed97310e9",
-            "c2f8ddb63c6a96fa"
+            "c2f8ddb63c6a96fa",
+            "95f297c866b9e056",
+            "9798cd4bac5c5e10",
+            "05d91733abb1c428",
+            "170b167a181f4a3a"
         ],
         "x": 894,
-        "y": 491.5,
-        "w": 1112,
-        "h": 177
+        "y": 499,
+        "w": 1192,
+        "h": 329.5
     },
     {
         "id": "b494e1e3118ec541",
@@ -229,7 +239,7 @@
             "773ab2a4abc0fcca"
         ],
         "x": 894,
-        "y": 719,
+        "y": 859,
         "w": 552,
         "h": 122
     },
@@ -250,12 +260,13 @@
             "86ea2f184c85d90c",
             "a2403a2ffe650465",
             "efe87849b25e8b24",
-            "4fd45b38451de1ca"
+            "4fd45b38451de1ca",
+            "f57a6a3bfd8cad7b"
         ],
         "x": 894,
-        "y": 879,
+        "y": 1019,
         "w": 652,
-        "h": 122
+        "h": 162
     },
     {
         "id": "e87d4bb36e9eef97",
@@ -276,9 +287,10 @@
             "aaef9d6a05249fb1",
             "f7659fad5f7d28e9",
             "9620c6bad196f68e",
-            "990988e041cf2685"
+            "990988e041cf2685",
+            "5b3c71550c2c85ef"
         ],
-        "x": 894,
+        "x": 1574,
         "y": 1019,
         "w": 672,
         "h": 162
@@ -404,7 +416,8 @@
         "y": 360,
         "wires": [
             [
-                "cb69ba197868d977"
+                "cb69ba197868d977",
+                "d4cb48e6c3e72f59"
             ]
         ]
     },
@@ -464,7 +477,8 @@
         "y": 520,
         "wires": [
             [
-                "0ff161bb8dacb2e6"
+                "0ff161bb8dacb2e6",
+                "40709983bc62211e"
             ]
         ]
     },
@@ -480,7 +494,7 @@
         "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "564a27a5e47ef674"
@@ -501,12 +515,13 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "273d1b3b25b4a7c2",
                 "3a427980db1f8657",
-                "40237f028d37fd7e"
+                "40237f028d37fd7e",
+                "e4e65d3a72430536"
             ]
         ]
     },
@@ -526,7 +541,7 @@
         "expiry": "",
         "broker": "mqtt_broker_pi1",
         "x": 630,
-        "y": 700,
+        "y": 740,
         "wires": []
     },
     {
@@ -536,9 +551,11 @@
         "g": "0a589b864fc903a5",
         "name": "Arm/Disarm Out",
         "mode": "link",
-        "links": [],
+        "links": [
+            "f82d905a91cb1b3c"
+        ],
         "x": 555,
-        "y": 760,
+        "y": 800,
         "wires": []
     },
     {
@@ -546,11 +563,11 @@
         "type": "http response",
         "z": "78e53885bf1abe0d",
         "g": "0a589b864fc903a5",
-        "name": "",
+        "name": "Arm Response",
         "statusCode": "",
         "headers": {},
-        "x": 590,
-        "y": 640,
+        "x": 620,
+        "y": 700,
         "wires": []
     },
     {
@@ -567,10 +584,11 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
-                "fc4d1caf9b1bc6ee"
+                "fc4d1caf9b1bc6ee",
+                "5df9e2947c50bc28"
             ]
         ]
     },
@@ -580,9 +598,11 @@
         "z": "78e53885bf1abe0d",
         "g": "de2f393901718946",
         "name": "Arm/Disarm In",
-        "links": [],
+        "links": [
+            "3a427980db1f8657"
+        ],
         "x": 115,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "a5af3db4d8f8e61d"
@@ -605,7 +625,7 @@
         "expiry": "",
         "broker": "mqtt_broker_pi1",
         "x": 670,
-        "y": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -716,7 +736,7 @@
         "name": "Dynamic Driver Position",
         "info": "",
         "x": 200,
-        "y": 880,
+        "y": 920,
         "wires": []
     },
     {
@@ -727,7 +747,7 @@
         "name": "Arm/Disarm via HTTP",
         "info": "",
         "x": 200,
-        "y": 660,
+        "y": 700,
         "wires": []
     },
     {
@@ -781,7 +801,8 @@
         "wires": [
             [
                 "9a70b6f0fa5e9514",
-                "1cf7dbea8b669802"
+                "1cf7dbea8b669802",
+                "7effca276f1298eb"
             ]
         ]
     },
@@ -957,7 +978,7 @@
         "g": "6a072c52208fa8e8",
         "name": "Buzzer",
         "pin": "3",
-        "x": 1500,
+        "x": 2000,
         "y": 540,
         "wires": []
     },
@@ -968,7 +989,7 @@
         "g": "6a072c52208fa8e8",
         "name": "RED LED",
         "pin": "4",
-        "x": 1500,
+        "x": 2000,
         "y": 620,
         "wires": []
     },
@@ -985,8 +1006,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Start Video",
-        "x": 1910,
-        "y": 540,
+        "x": 1530,
+        "y": 700,
         "wires": [
             [],
             [],
@@ -1006,8 +1027,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "End Video",
-        "x": 1910,
-        "y": 620,
+        "x": 1530,
+        "y": 780,
         "wires": [
             [],
             [],
@@ -1027,8 +1048,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 580,
+        "x": 1310,
+        "y": 740,
         "wires": [
             [
                 "7490ea89556eef65",
@@ -1042,19 +1063,18 @@
         "z": "78e53885bf1abe0d",
         "g": "6a072c52208fa8e8",
         "name": "alarmOff",
-        "func": "msg.payload = 0;\nreturn msg;",
+        "func": "flow.set(\"alertActive\", false);\nflow.set(\"alertTickN\", 0);\n\nmsg.payload = 0;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
+        "x": 1260,
         "y": 620,
         "wires": [
             [
-                "ad9c14766df20cba",
-                "07d1b91ec18aed49"
+                "9798cd4bac5c5e10"
             ]
         ]
     },
@@ -1063,18 +1083,20 @@
         "type": "function",
         "z": "78e53885bf1abe0d",
         "g": "6a072c52208fa8e8",
-        "name": "alarmOn(TODO)",
-        "func": "\nreturn msg;",
+        "name": "alarmOn",
+        "func": "const ctl = msg.control || {};\nif (ctl.action !== \"start\") return null;\n\nflow.set(\"alertActive\", true);\n\n// Track LED toggle state in flow context\nflow.set(\"alertLedState\", 0);\nflow.set(\"alertIntrusionId\", ctl.intrusionId || null);\n\nmsg.tick = { ts: Date.now(), n: 0 };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
+        "x": 1260,
         "y": 540,
         "wires": [
-            []
+            [
+                "95f297c866b9e056"
+            ]
         ]
     },
     {
@@ -1088,7 +1110,7 @@
             "f7659fad5f7d28e9"
         ],
         "x": 935,
-        "y": 800,
+        "y": 940,
         "wires": [
             [
                 "da3690246efc2101"
@@ -1109,7 +1131,7 @@
         "finalize": "",
         "libs": [],
         "x": 1120,
-        "y": 800,
+        "y": 940,
         "wires": [
             [
                 "d16ba9e8ccd26e9e"
@@ -1131,7 +1153,7 @@
         "org": "organisation",
         "bucket": "bucket",
         "x": 1360,
-        "y": 800,
+        "y": 940,
         "wires": []
     },
     {
@@ -1142,7 +1164,7 @@
         "name": "Save Sensor Snapshots",
         "info": "",
         "x": 1020,
-        "y": 760,
+        "y": 900,
         "wires": []
     },
     {
@@ -1157,7 +1179,7 @@
         "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 990,
-        "y": 960,
+        "y": 1100,
         "wires": [
             [
                 "a2403a2ffe650465"
@@ -1178,7 +1200,7 @@
         "finalize": "",
         "libs": [],
         "x": 1200,
-        "y": 960,
+        "y": 1100,
         "wires": [
             [
                 "efe87849b25e8b24"
@@ -1194,7 +1216,7 @@
         "statusCode": "",
         "headers": {},
         "x": 1430,
-        "y": 960,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1208,7 +1230,7 @@
         "upload": false,
         "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 1000,
+        "x": 1680,
         "y": 1100,
         "wires": [
             [
@@ -1229,7 +1251,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 1910,
         "y": 1100,
         "wires": [
             [
@@ -1247,7 +1269,7 @@
         "name": "Resolve Response",
         "statusCode": "",
         "headers": {},
-        "x": 1450,
+        "x": 2130,
         "y": 1060,
         "wires": []
     },
@@ -1262,7 +1284,7 @@
             "862ac579f47c9eb4",
             "feb3b659604c2a35"
         ],
-        "x": 1375,
+        "x": 2055,
         "y": 1140,
         "wires": []
     },
@@ -1281,7 +1303,7 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 1450,
+        "x": 2130,
         "y": 1100,
         "wires": []
     },
@@ -1292,7 +1314,7 @@
         "g": "e87d4bb36e9eef97",
         "name": "HTTP Resolve Incident",
         "info": "",
-        "x": 1020,
+        "x": 1700,
         "y": 1060,
         "wires": []
     },
@@ -1304,7 +1326,267 @@
         "name": "HTTP Get Status",
         "info": "",
         "x": 1000,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "d4cb48e6c3e72f59",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "8f31da830bfc142b",
+        "name": "debugClimate",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "40709983bc62211e",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "bf9eea5de98d608c",
+        "name": "debugKeepLastDistance",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "73a843a849fe864e",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "0a589b864fc903a5",
+        "name": "debugArmed",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"armed\":true}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "564a27a5e47ef674"
+            ]
+        ]
+    },
+    {
+        "id": "e4e65d3a72430536",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "0a589b864fc903a5",
+        "name": "debugArmDisarm",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5b3c71550c2c85ef",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "debugResolve",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"resolved\":true,\"note\":\"Owner confirmed false alarm\"}",
+        "payloadType": "json",
+        "x": 1690,
+        "y": 1140,
+        "wires": [
+            [
+                "4da8dd1ec40489c6"
+            ]
+        ]
+    },
+    {
+        "id": "f57a6a3bfd8cad7b",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "debugGetStatus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"armed\":true,\"state\":\"suspicious\",\"baseline\":{\"distanceCm\":62,\"capturedAt\":1762031999000},\"last\":{\"distanceCm\":48,\"sound\":90,\"vibration\":0,\"accelMag\":1.02},\"ts\":1772696190234}",
+        "payloadType": "json",
+        "x": 1020,
+        "y": 1140,
+        "wires": [
+            [
+                "a2403a2ffe650465"
+            ]
+        ]
+    },
+    {
+        "id": "5df9e2947c50bc28",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "de2f393901718946",
+        "name": "debugCaptureBaseline",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
         "y": 920,
         "wires": []
+    },
+    {
+        "id": "7effca276f1298eb",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "eecac3e1703cb385",
+        "name": "debugSecurityCore",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "95f297c866b9e056",
+        "type": "trigger",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "Alarm Tick",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-250",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1430,
+        "y": 540,
+        "wires": [
+            [
+                "9798cd4bac5c5e10"
+            ]
+        ]
+    },
+    {
+        "id": "9798cd4bac5c5e10",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "Alarm Tick Router",
+        "func": "// Function node: Alert Tick Router  (outputs: 2)\n// Responsibilities:\n// - Stop the repeating Trigger when alert is not active (msg.reset = true)\n// - While active: emit (1) buzzer-on msg, (2) LED toggle msg\n\nconst now = Date.now();\n\n// If this message came from alarmOff, mark alert inactive\n// (We'll also set flow.alertActive=false in alarmOff itself below, which is best.)\nif (msg.event?.type === \"ALARM_OFF\") {\n    flow.set(\"alertActive\", false);\n}\n\n// Gate: only run ticks while alertActive\nconst active = Boolean(flow.get(\"alertActive\"));\n\nif (!active) {\n    // tell trigger to stop repeating\n    return [{ reset: true }, null]; // output 1 carries reset; output 2 unused\n}\n\n// Active: produce buzzer-on and LED-toggle messages\nconst buzzerMsg = { payload: 1, _ts: now };\nconst ledToggleMsg = { _ts: now };\n\n// Maintain a tick counter for debugging / optional patterns\nlet n = flow.get(\"alertTickN\") || 0;\nn += 1;\nflow.set(\"alertTickN\", n);\n\nbuzzerMsg.tick = { ts: now, n };\nledToggleMsg.tick = { ts: now, n };\n\nreturn [buzzerMsg, ledToggleMsg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 580,
+        "wires": [
+            [
+                "05d91733abb1c428"
+            ],
+            [
+                "170b167a181f4a3a"
+            ]
+        ]
+    },
+    {
+        "id": "05d91733abb1c428",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "buzzerOn",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1820,
+        "y": 540,
+        "wires": [
+            [
+                "07d1b91ec18aed49"
+            ]
+        ]
+    },
+    {
+        "id": "170b167a181f4a3a",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "toggleLED",
+        "func": "let s = flow.get(\"alertLedState\") || 0;\ns = s ? 0 : 1;\nflow.set(\"alertLedState\", s);\n\nmsg.payload = s;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1830,
+        "y": 620,
+        "wires": [
+            [
+                "ad9c14766df20cba"
+            ]
+        ]
     }
 ]

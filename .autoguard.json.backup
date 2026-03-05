@@ -48,11 +48,12 @@
             "a5af3db4d8f8e61d",
             "f82d905a91cb1b3c",
             "fc4d1caf9b1bc6ee",
-            "a3ade164d56a23f5"
+            "a3ade164d56a23f5",
+            "5df9e2947c50bc28"
         ],
         "x": 74,
-        "y": 839,
-        "w": 712,
+        "y": 879,
+        "w": 752,
         "h": 122
     },
     {
@@ -74,12 +75,14 @@
             "273d1b3b25b4a7c2",
             "3a427980db1f8657",
             "40237f028d37fd7e",
-            "f9048585096b9edc"
+            "f9048585096b9edc",
+            "73a843a849fe864e",
+            "e4e65d3a72430536"
         ],
         "x": 74,
         "y": 599,
-        "w": 672,
-        "h": 202
+        "w": 692,
+        "h": 242
     },
     {
         "id": "bf9eea5de98d608c",
@@ -98,11 +101,12 @@
             "24b93fc3dd7f26d8",
             "8a1ee34ddedd8c29",
             "0ff161bb8dacb2e6",
-            "109cb88adecddf64"
+            "109cb88adecddf64",
+            "40709983bc62211e"
         ],
         "x": 74,
         "y": 439,
-        "w": 562,
+        "w": 772,
         "h": 122
     },
     {
@@ -122,11 +126,12 @@
             "34d1e37fcea063c8",
             "952d10bea95a8432",
             "cb69ba197868d977",
-            "c152b12ccd4d4622"
+            "c152b12ccd4d4622",
+            "d4cb48e6c3e72f59"
         ],
         "x": 74,
         "y": 279,
-        "w": 652,
+        "w": 712,
         "h": 122
     },
     {
@@ -172,7 +177,8 @@
             "1cf7dbea8b669802",
             "63ddb045127b5f3e",
             "0d6fc5154e026fa1",
-            "f87441ab2684d4bd"
+            "f87441ab2684d4bd",
+            "7effca276f1298eb"
         ],
         "x": 894,
         "y": 279,
@@ -200,12 +206,92 @@
             "ad9c14766df20cba",
             "7490ea89556eef65",
             "369b20bf741f25f8",
-            "107f5053e5127f4a"
+            "107f5053e5127f4a",
+            "9f10f25ed97310e9",
+            "c2f8ddb63c6a96fa",
+            "9cb4226308db9830",
+            "45aa74eb6d939aa9"
         ],
         "x": 894,
-        "y": 511.5,
-        "w": 1102,
-        "h": 177
+        "y": 439,
+        "w": 1412,
+        "h": 229.5
+    },
+    {
+        "id": "b494e1e3118ec541",
+        "type": "group",
+        "z": "78e53885bf1abe0d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "feb3b659604c2a35",
+            "da3690246efc2101",
+            "d16ba9e8ccd26e9e",
+            "773ab2a4abc0fcca"
+        ],
+        "x": 894,
+        "y": 699,
+        "w": 552,
+        "h": 122
+    },
+    {
+        "id": "0f5c18efec07e0f7",
+        "type": "group",
+        "z": "78e53885bf1abe0d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "86ea2f184c85d90c",
+            "a2403a2ffe650465",
+            "efe87849b25e8b24",
+            "4fd45b38451de1ca",
+            "f57a6a3bfd8cad7b"
+        ],
+        "x": 894,
+        "y": 859,
+        "w": 652,
+        "h": 162
+    },
+    {
+        "id": "e87d4bb36e9eef97",
+        "type": "group",
+        "z": "78e53885bf1abe0d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "226598f4dab18300",
+            "4da8dd1ec40489c6",
+            "aaef9d6a05249fb1",
+            "f7659fad5f7d28e9",
+            "9620c6bad196f68e",
+            "990988e041cf2685",
+            "5b3c71550c2c85ef"
+        ],
+        "x": 894,
+        "y": 1059,
+        "w": 672,
+        "h": 162
     },
     {
         "id": "mqtt_broker_pi1",
@@ -328,7 +414,8 @@
         "y": 360,
         "wires": [
             [
-                "cb69ba197868d977"
+                "cb69ba197868d977",
+                "d4cb48e6c3e72f59"
             ]
         ]
     },
@@ -388,7 +475,8 @@
         "y": 520,
         "wires": [
             [
-                "0ff161bb8dacb2e6"
+                "0ff161bb8dacb2e6",
+                "40709983bc62211e"
             ]
         ]
     },
@@ -404,7 +492,7 @@
         "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 170,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "564a27a5e47ef674"
@@ -425,12 +513,13 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 700,
+        "y": 740,
         "wires": [
             [
                 "273d1b3b25b4a7c2",
                 "3a427980db1f8657",
-                "40237f028d37fd7e"
+                "40237f028d37fd7e",
+                "e4e65d3a72430536"
             ]
         ]
     },
@@ -450,7 +539,7 @@
         "expiry": "",
         "broker": "mqtt_broker_pi1",
         "x": 630,
-        "y": 700,
+        "y": 740,
         "wires": []
     },
     {
@@ -460,9 +549,11 @@
         "g": "0a589b864fc903a5",
         "name": "Arm/Disarm Out",
         "mode": "link",
-        "links": [],
+        "links": [
+            "f82d905a91cb1b3c"
+        ],
         "x": 555,
-        "y": 760,
+        "y": 800,
         "wires": []
     },
     {
@@ -470,11 +561,11 @@
         "type": "http response",
         "z": "78e53885bf1abe0d",
         "g": "0a589b864fc903a5",
-        "name": "",
+        "name": "Arm Response",
         "statusCode": "",
         "headers": {},
-        "x": 590,
-        "y": 640,
+        "x": 620,
+        "y": 700,
         "wires": []
     },
     {
@@ -491,10 +582,11 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
-                "fc4d1caf9b1bc6ee"
+                "fc4d1caf9b1bc6ee",
+                "5df9e2947c50bc28"
             ]
         ]
     },
@@ -504,9 +596,11 @@
         "z": "78e53885bf1abe0d",
         "g": "de2f393901718946",
         "name": "Arm/Disarm In",
-        "links": [],
+        "links": [
+            "3a427980db1f8657"
+        ],
         "x": 115,
-        "y": 920,
+        "y": 960,
         "wires": [
             [
                 "a5af3db4d8f8e61d"
@@ -529,7 +623,7 @@
         "expiry": "",
         "broker": "mqtt_broker_pi1",
         "x": 670,
-        "y": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -640,7 +734,7 @@
         "name": "Dynamic Driver Position",
         "info": "",
         "x": 200,
-        "y": 880,
+        "y": 920,
         "wires": []
     },
     {
@@ -651,7 +745,7 @@
         "name": "Arm/Disarm via HTTP",
         "info": "",
         "x": 200,
-        "y": 660,
+        "y": 700,
         "wires": []
     },
     {
@@ -705,7 +799,8 @@
         "wires": [
             [
                 "9a70b6f0fa5e9514",
-                "1cf7dbea8b669802"
+                "1cf7dbea8b669802",
+                "7effca276f1298eb"
             ]
         ]
     },
@@ -759,7 +854,7 @@
         "name": "securityCore Out",
         "mode": "link",
         "links": [
-            "862ac579f47c9eb4"
+            "feb3b659604c2a35"
         ],
         "x": 1255,
         "y": 420,
@@ -791,7 +886,9 @@
         "g": "eecac3e1703cb385",
         "name": "Route Distance Change Out",
         "mode": "link",
-        "links": [],
+        "links": [
+            "862ac579f47c9eb4"
+        ],
         "x": 1555,
         "y": 400,
         "wires": []
@@ -815,7 +912,7 @@
         "name": "Alarm Activation",
         "info": "",
         "x": 1000,
-        "y": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -825,10 +922,11 @@
         "g": "6a072c52208fa8e8",
         "name": "Alarm Activation In",
         "links": [
-            "1cf7dbea8b669802"
+            "0d6fc5154e026fa1",
+            "f7659fad5f7d28e9"
         ],
         "x": 935,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "d57e48015dd26a9c"
@@ -859,13 +957,15 @@
         "repair": false,
         "outputs": 2,
         "x": 1090,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
-                "107f5053e5127f4a"
+                "107f5053e5127f4a",
+                "c2f8ddb63c6a96fa"
             ],
             [
-                "107f5053e5127f4a"
+                "107f5053e5127f4a",
+                "9f10f25ed97310e9"
             ]
         ]
     },
@@ -876,8 +976,8 @@
         "g": "6a072c52208fa8e8",
         "name": "Buzzer",
         "pin": "3",
-        "x": 1500,
-        "y": 560,
+        "x": 1800,
+        "y": 540,
         "wires": []
     },
     {
@@ -887,8 +987,8 @@
         "g": "6a072c52208fa8e8",
         "name": "RED LED",
         "pin": "4",
-        "x": 1500,
-        "y": 640,
+        "x": 1800,
+        "y": 620,
         "wires": []
     },
     {
@@ -904,8 +1004,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Start Video",
-        "x": 1900,
-        "y": 560,
+        "x": 2210,
+        "y": 540,
         "wires": [
             [],
             [],
@@ -925,8 +1025,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "End Video",
-        "x": 1900,
-        "y": 640,
+        "x": 2210,
+        "y": 620,
         "wires": [
             [],
             [],
@@ -946,12 +1046,500 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 600,
+        "x": 1990,
+        "y": 580,
         "wires": [
             [
                 "7490ea89556eef65",
                 "369b20bf741f25f8"
+            ]
+        ]
+    },
+    {
+        "id": "9f10f25ed97310e9",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "alarmOff",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 620,
+        "wires": [
+            [
+                "ad9c14766df20cba",
+                "07d1b91ec18aed49"
+            ]
+        ]
+    },
+    {
+        "id": "c2f8ddb63c6a96fa",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "alarmOn",
+        "func": "const ctl = msg.control || {};\nif (ctl.action !== \"start\") return null;\n\nflow.set(\"alertActive\", true);\n\n// Track LED toggle state in flow context\nflow.set(\"alertLedState\", 0);\nflow.set(\"alertIntrusionId\", ctl.intrusionId || null);\n\nmsg.tick = { ts: Date.now(), n: 0 };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 480,
+        "wires": [
+            [
+                "9cb4226308db9830"
+            ]
+        ]
+    },
+    {
+        "id": "feb3b659604c2a35",
+        "type": "link in",
+        "z": "78e53885bf1abe0d",
+        "g": "b494e1e3118ec541",
+        "name": "link in 1",
+        "links": [
+            "1cf7dbea8b669802",
+            "f7659fad5f7d28e9"
+        ],
+        "x": 935,
+        "y": 780,
+        "wires": [
+            [
+                "da3690246efc2101"
+            ]
+        ]
+    },
+    {
+        "id": "da3690246efc2101",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "b494e1e3118ec541",
+        "name": "buildInfluxEventPoint",
+        "func": "// Function node: buildInfluxEventPoint\nconst ev = msg.event || {};\nconst last = flow.get(\"last\") || {};\nconst baseline = flow.get(\"baseline\") || {};\n\nmsg.payload = {\n    measurement: \"security_events\",\n    tags: {\n        device: \"pi1\",\n        intrusionId: ev.intrusionId || \"none\",\n        type: ev.type || \"unknown\"\n    },\n    fields: {\n        armed: 1,\n        state: String(ev.state || flow.get(\"securityState\") || \"unknown\"),\n        reason: String(ev.reason || \"\"),\n        evidence: JSON.stringify(ev.evidence || []),\n\n        // snapshot fields\n        distance_cm: last.distanceCm !== null ? Number(last.distanceCm) : null,\n        baseline_cm: baseline.distanceCm !== null ? Number(baseline.distanceCm) : null,\n        sound: last.sound !== null ? Number(last.sound) : null,\n        vibration: last.vibration !== null ? Number(last.vibration) : null,\n        accel_mag: last.accelMag !== null ? Number(last.accelMag) : null\n    },\n    timestamp: new Date(ev.ts || Date.now())\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 780,
+        "wires": [
+            [
+                "d16ba9e8ccd26e9e"
+            ]
+        ]
+    },
+    {
+        "id": "d16ba9e8ccd26e9e",
+        "type": "influxdb out",
+        "z": "78e53885bf1abe0d",
+        "g": "b494e1e3118ec541",
+        "name": "",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1360,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "773ab2a4abc0fcca",
+        "type": "comment",
+        "z": "78e53885bf1abe0d",
+        "g": "b494e1e3118ec541",
+        "name": "Save Sensor Snapshots",
+        "info": "",
+        "x": 1020,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "86ea2f184c85d90c",
+        "type": "http in",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "GET Status",
+        "url": "/api/status",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 990,
+        "y": 940,
+        "wires": [
+            [
+                "a2403a2ffe650465"
+            ]
+        ]
+    },
+    {
+        "id": "a2403a2ffe650465",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "getStatus",
+        "func": "// Function node: getStatus\nconst now = Date.now();\nmsg.payload = {\n  armed: Boolean(flow.get(\"armed\")),\n  state: flow.get(\"securityState\"),\n  baseline: flow.get(\"baseline\"),\n  last: (() => {\n    const l = flow.get(\"last\") || {};\n    return {\n      distanceCm: l.distanceCm ?? null,\n      sound: l.sound ?? null,\n      vibration: l.vibration ?? null,\n      accelMag: l.accelMag ?? null\n    };\n  })(),\n  intrusion: flow.get(\"intrusion\"),\n  ts: now\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 940,
+        "wires": [
+            [
+                "efe87849b25e8b24"
+            ]
+        ]
+    },
+    {
+        "id": "efe87849b25e8b24",
+        "type": "http response",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "Status Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "226598f4dab18300",
+        "type": "http in",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "POST Resolve",
+        "url": "/api/resolve",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 1000,
+        "y": 1140,
+        "wires": [
+            [
+                "4da8dd1ec40489c6"
+            ]
+        ]
+    },
+    {
+        "id": "4da8dd1ec40489c6",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "resolveAlarm",
+        "func": "// Function node: resolveAlarm\nconst now = Date.now();\nconst armed = Boolean(flow.get(\"armed\"));\nlet state = flow.get(\"securityState\");\nconst intrusion = flow.get(\"intrusion\") || {};\n\nif (!armed) {\n    msg.payload = { ok: false, error: \"System not armed\", ts: now };\n    return msg;\n}\n\nif (state === \"alarm\" || state === \"suspicious\") {\n    // force transition to resolved -> normal (engine will carry back)\n    flow.set(\"securityState\", \"resolved\");\n\n    msg.event = {\n        type: \"ALARM_OFF\",\n        reason: \"user_resolve\",\n        intrusionId: intrusion.id,\n        ts: now,\n        state: \"resolved\",\n        evidence: intrusion.confirmedBy || []\n    };\n\n    msg.mqttTopic = \"vehicle/security/status\";\n    msg.mqttPayload = { armed: true, state: \"resolved\", intrusionId: intrusion.id, ts: now };\n\n    msg.payload = { ok: true, message: \"Resolved\", ...msg.mqttPayload };\n\n    return msg;\n}\n\nmsg.payload = { ok: true, message: \"No active incident\", state, ts: now };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 1140,
+        "wires": [
+            [
+                "aaef9d6a05249fb1",
+                "f7659fad5f7d28e9",
+                "9620c6bad196f68e"
+            ]
+        ]
+    },
+    {
+        "id": "aaef9d6a05249fb1",
+        "type": "http response",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "Resolve Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 1450,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "f7659fad5f7d28e9",
+        "type": "link out",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "Resolve Out",
+        "mode": "link",
+        "links": [
+            "862ac579f47c9eb4",
+            "feb3b659604c2a35"
+        ],
+        "x": 1375,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "9620c6bad196f68e",
+        "type": "mqtt out",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "Vehicle Status Out",
+        "topic": "vehicle/security/status",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_pi1",
+        "x": 1450,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "990988e041cf2685",
+        "type": "comment",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "HTTP Resolve Incident",
+        "info": "",
+        "x": 1020,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4fd45b38451de1ca",
+        "type": "comment",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "HTTP Get Status",
+        "info": "",
+        "x": 1000,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d4cb48e6c3e72f59",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "8f31da830bfc142b",
+        "name": "debugClimate",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "40709983bc62211e",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "bf9eea5de98d608c",
+        "name": "debugKeepLastDistance",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "73a843a849fe864e",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "0a589b864fc903a5",
+        "name": "debugArmed",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"armed\":true}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "564a27a5e47ef674"
+            ]
+        ]
+    },
+    {
+        "id": "e4e65d3a72430536",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "0a589b864fc903a5",
+        "name": "debugArmDisarm",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5b3c71550c2c85ef",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "e87d4bb36e9eef97",
+        "name": "debugResolve",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"resolved\":true,\"note\":\"Owner confirmed false alarm\"}",
+        "payloadType": "json",
+        "x": 1010,
+        "y": 1180,
+        "wires": [
+            [
+                "4da8dd1ec40489c6"
+            ]
+        ]
+    },
+    {
+        "id": "f57a6a3bfd8cad7b",
+        "type": "inject",
+        "z": "78e53885bf1abe0d",
+        "g": "0f5c18efec07e0f7",
+        "name": "debugGetStatus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"armed\":true,\"state\":\"suspicious\",\"baseline\":{\"distanceCm\":62,\"capturedAt\":1762031999000},\"last\":{\"distanceCm\":48,\"sound\":90,\"vibration\":0,\"accelMag\":1.02},\"ts\":1772696190234}",
+        "payloadType": "json",
+        "x": 1020,
+        "y": 980,
+        "wires": [
+            [
+                "a2403a2ffe650465"
+            ]
+        ]
+    },
+    {
+        "id": "5df9e2947c50bc28",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "de2f393901718946",
+        "name": "debugCaptureBaseline",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7effca276f1298eb",
+        "type": "debug",
+        "z": "78e53885bf1abe0d",
+        "g": "eecac3e1703cb385",
+        "name": "debugSecurityCore",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9cb4226308db9830",
+        "type": "function",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "alarmTick",
+        "func": "const active = Boolean(flow.get(\"alertActive\"));\nif (!active) return null;\n\nlet ledState = Number(flow.get(\"alertLedState\") || 0);\nledState = ledState ? 0 : 1;          // toggle\nflow.set(\"alertLedState\", ledState);\n\nconst now = Date.now();\n\nmsg.actuators = {\n    buzzer: 1,     // steady ON\n    redLed: ledState\n};\n\n// This msg continues into BlinkDelay, then loops back into AlertTick\nmsg.tick = {\n    ts: now,\n    n: (msg.tick?.n ?? 0) + 1\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 480,
+        "wires": [
+            [
+                "45aa74eb6d939aa9"
+            ]
+        ]
+    },
+    {
+        "id": "45aa74eb6d939aa9",
+        "type": "delay",
+        "z": "78e53885bf1abe0d",
+        "g": "6a072c52208fa8e8",
+        "name": "BlinkDelay",
+        "pauseType": "delay",
+        "timeout": "400",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1630,
+        "y": 480,
+        "wires": [
+            [
+                "9cb4226308db9830"
             ]
         ]
     }
