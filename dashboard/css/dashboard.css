@@ -1,0 +1,181 @@
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+.app-shell {
+    min-height: 100vh;
+}
+
+.topbar {
+    background: #111827;
+    border-bottom: 1px solid #1f2937;
+}
+
+.topbar-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.sidebar {
+    background: #111827;
+    border-right: 1px solid #1f2937;
+    min-height: calc(100vh - 73px);
+}
+
+.nav-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: #1f2937;
+    color: #e5e7eb;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+}
+
+.nav-circle:hover,
+.nav-circle.active {
+    background: #2563eb;
+    color: #fff;
+}
+
+.content-area {
+    min-height: calc(100vh - 73px);
+    background: #0f172a;
+}
+
+.panel-card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.status-chip {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+}
+
+.camera-frame {
+    width: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #0b1220;
+    border: 1px solid #1f2937;
+}
+
+.intrusion-log {
+    max-height: 420px;
+    overflow-y: auto;
+    background: transparent;
+}
+
+.intrusion-log .list-group-item {
+    background: #0b1220;
+    color: #e2e8f0;
+    border: 1px solid #1f2937;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+}
+
+.history-list {
+    max-height: 520px;
+    overflow-y: auto;
+}
+
+.history-item {
+    cursor: pointer;
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    color: #e2e8f0;
+}
+
+.history-item.active {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb inset;
+}
+
+.metric-card {
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 1rem;
+    height: 100%;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.small-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+    background: #0b1220;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #0b1220;
+    color: #e2e8f0;
+    border-color: #2563eb;
+    box-shadow: none;
+}
+
+.media-note {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.empty-state {
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1rem;
+    border: 1px dashed #334155;
+    border-radius: 12px;
+    background: #0b1220;
+}
+
+.intrusion-group-list {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.intrusion-group-item {
+    width: 100%;
+    text-align: left;
+    background: #0b1220;
+    color: #e2e8f0;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.intrusion-group-item:hover,
+.intrusion-group-item.active {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px #2563eb inset;
+}
+
+.event-block {
+    background: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 0.85rem;
+    margin-bottom: 0.75rem;
+}
