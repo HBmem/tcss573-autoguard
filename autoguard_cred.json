@@ -1,3 +1,7 @@
 {
-    "mqtt_broker_pi1": {}
+    "mqtt_broker_pi1": {},
+    "influx_cfg_pi1": {
+        "token": "skaiDcUw-OErlQJtR62cBYf4NutzBZG3hDErvvg9QKycISe5oY4IvZHOtTu0liaHfSPdkFX1CzsDqHLKZVXpog=="
+    },
+    "b7bc8d757e62072b": {}
 }
