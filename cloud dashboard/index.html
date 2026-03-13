@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGuard Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container-fluid app-shell px-0">
+        <header class="topbar px-4 py-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="./assets/logo.png" alt="AutoGuard Logo" class="topbar-logo">
+                    <div>
+                        <h1 class="h4 mb-0">AutoGuard</h1>
+                        <div class="small-label">Local Smart Vehicle Security Dashboard</div>
+                    </div>
+                </div>
+
+                <div class="ms-auto d-flex align-items-center gap-2 flex-wrap">
+                    <span id="systemStateBadge" class="badge text-bg-secondary status-chip">Inactive</span>
+                    <button id="cancelAlarmBtn" class="btn btn-warning" disabled>Resolve Alarm</button>
+                    <button id="armStatusBtn" class="btn btn-primary">Loading Status...</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="row g-0">
+            <aside class="col-12 col-md-1 sidebar d-flex justify-content-center py-4">
+                <nav class="d-flex flex-md-column gap-3">
+                    <button class="nav-circle active" data-view="intrusionView" title="Intrusion">
+                        <i class="bi bi-camera-video-fill"></i>
+                    </button>
+                    <button class="nav-circle" data-view="metricsView" title="Metrics">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </button>
+                    <button class="nav-circle" data-view="historyView" title="History">
+                        <i class="bi bi-clock-history"></i>
+                    </button>
+                    <button class="nav-circle" data-view="settingsView" title="Settings">
+                        <i class="bi bi-gear-fill"></i>
+                    </button>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-11 content-area p-4">
+                <section id="intrusionView">
+                    <div class="row g-4 mb-4">
+                        <div class="col-12">
+                            <div class="panel-card">
+                                <div class="d-flex flex-wrap gap-2" id="sensorStatusRow">
+                                    <span id="occupancySensor" class="badge text-bg-secondary status-chip">Occupancy Sensor Off</span>
+                                    <span id="vibrationSensor" class="badge text-bg-secondary status-chip">Window Vibration Sensor Off</span>
+                                    <span id="accelSensor" class="badge text-bg-secondary status-chip">Door Acceleration Sensor Off</span>
+                                    <span id="climateSensor" class="badge text-bg-info status-chip">Climate Monitoring Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="panel-card">
+                                <h2 class="h5 mb-3">Intrusions</h2>
+                                <div id="intrusionGroupList" class="intrusion-group-list d-flex flex-column gap-2"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="panel-card">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h2 class="h5 mb-1">Selected Intrusion Media</h2>
+                                                <div class="small-label">Media for the currently selected intrusion</div>
+                                            </div>
+                                        </div>
+
+                                        <img id="cameraImage" class="camera-frame" alt="Intrusion Capture" src="" style="display:none;">
+                                        <div id="cameraPlaceholder" class="empty-state">
+                                            No intrusion media available for the selected intrusion.
+                                        </div>
+
+                                        <div class="mt-3 d-flex flex-wrap gap-2">
+                                            <a id="openImageLink" class="btn btn-outline-light d-none" target="_blank" rel="noopener noreferrer">Open Image</a>
+                                            <a id="openVideoLink" class="btn btn-outline-warning d-none" target="_blank" rel="noopener noreferrer">Open Video</a>
+                                        </div>
+
+                                        <div class="mt-3 media-note">
+                                            Video files stored as raw camera output may open in a new tab or download depending on browser support.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="panel-card">
+                                        <h2 class="h5 mb-3">Selected Intrusion Summary</h2>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="small-label">Intrusion ID</div>
+                                                <div id="currentIntrusionId">--</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="small-label">Started At</div>
+                                                <div id="currentIntrusionStartedAt">--</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="small-label">Latest State</div>
+                                                <div id="selectedIntrusionState">--</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="small-label">Latest Reason</div>
+                                                <div id="selectedIntrusionReason">--</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="small-label">Detected Evidence</div>
+                                                <div id="currentIntrusionEvidence">--</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="small-label">Latest Note</div>
+                                                <div id="currentIntrusionNote">--</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="panel-card">
+                                        <h2 class="h5 mb-3">Selected Intrusion Timeline</h2>
+                                        <div id="selectedIntrusionTimeline"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="metricsView" class="d-none">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-3">
+                            <div class="metric-card">
+                                <div class="small-label">Temperature</div>
+                                <div id="metricTemperature" class="metric-value">--</div>
+                                <div class="small-label">°C</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="metric-card">
+                                <div class="small-label">Humidity</div>
+                                <div id="metricHumidity" class="metric-value">--</div>
+                                <div class="small-label">%</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="metric-card">
+                                <div class="small-label">Driver Seat Distance</div>
+                                <div id="metricDistance" class="metric-value">--</div>
+                                <div class="small-label">cm</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="metric-card">
+                                <div class="small-label">Acceleration Magnitude</div>
+                                <div id="metricAccel" class="metric-value">--</div>
+                                <div class="small-label">current</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="panel-card">
+                                <h2 class="h5 mb-3">Climate Trend</h2>
+                                <div id="climateChart" style="height: 320px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="panel-card">
+                                <h2 class="h5 mb-3">Security Sensor Trend</h2>
+                                <div id="securityChart" style="height: 320px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="historyView" class="d-none">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <div class="panel-card">
+                                <h2 class="h5 mb-3">Recent Events</h2>
+                                <div id="historyList" class="history-list d-flex flex-column gap-2"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="panel-card">
+                                <h2 class="h5 mb-3">Selected Event Details</h2>
+                                <div id="historyDetails" class="empty-state">
+                                    Select an event to view its details.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="settingsView" class="d-none">
+                    <div class="panel-card">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div>
+                                <h2 class="h5 mb-1">System Settings</h2>
+                                <div class="small-label">Update dashboard-controlled security options</div>
+                            </div>
+                            <button id="saveSettingsBtn" class="btn btn-success">Save Settings</button>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <label class="form-label">Suspicious Mode</label>
+                                <select id="suspiciousModeEnabled" class="form-select">
+                                    <option value="true">Enabled</option>
+                                    <option value="false">Disabled</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Seat Delta Threshold (cm)</label>
+                                <input id="seatDeltaCm" type="number" class="form-control" min="1">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Seat Debounce (ms)</label>
+                                <input id="seatDebounceMs" type="number" class="form-control" min="0">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Vibration Spike Threshold</label>
+                                <input id="vibrationSpike" type="number" class="form-control" min="0" step="0.1">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Acceleration Magnitude Threshold</label>
+                                <input id="accelMagSpike" type="number" class="form-control" min="0" step="0.1">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Confirmation Window (ms)</label>
+                                <input id="confirmWindowMs" type="number" class="form-control" min="0">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Suspicious Timeout (ms)</label>
+                                <input id="suspiciousTimeoutMs" type="number" class="form-control" min="0">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Alarm Minimum Time (ms)</label>
+                                <input id="alarmMinMs" type="number" class="form-control" min="0">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Auto Resolve Quiet Time (ms)</label>
+                                <input id="autoResolveQuietMs" type="number" class="form-control" min="0">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Notification Phone</label>
+                                <input id="notificationPhone" type="text" class="form-control" placeholder="Enter phone number">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Notification Email</label>
+                                <input id="notificationEmail" type="email" class="form-control" placeholder="Enter email address">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="suspiciousActivityModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="suspiciousActivityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning shadow-lg">
+                <div class="modal-header bg-warning-subtle">
+                    <h5 class="modal-title text-dark" id="suspiciousActivityModalLabel">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        Suspicious Activity Detected
+                    </h5>
+                </div>
+                <div class="modal-body text-dark">
+                    <p class="mb-3">
+                        AutoGuard detected suspicious activity inside or around the vehicle.
+                    </p>
+
+                    <div class="alert alert-warning mb-3" id="suspiciousSummary">
+                        Waiting for details...
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Detected Sensors</h6>
+                        <div class="d-flex flex-wrap gap-2" id="suspiciousSensorBadges"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Recorded Time</h6>
+                        <p class="mb-0" id="suspiciousStartedAt">--</p>
+                    </div>
+
+                    <div class="mb-0">
+                        <label for="suspiciousUserNote" class="form-label">Optional note</label>
+                        <textarea id="suspiciousUserNote" class="form-control" rows="3" placeholder="Example: I opened the vehicle myself."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmUserResponsibleBtn" type="button" class="btn btn-success">
+                        I Caused This Activity
+                    </button>
+                    <button id="triggerAlarmBtn" type="button" class="btn btn-danger">
+                        Trigger Alarm
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
