@@ -1,5 +1,5 @@
 const API_BASE_URL = 'https://10.0.0.203:1880/api';
-// const API_BASE_URL = 'https://10.18.50.103:1880/api';
+// const API_BASE_URL = 'https://10.19.73.166:1880/api';
 
 const HTTP_ROOT = API_BASE_URL.replace(/\/api$/, '');
 const MEDIA_ROOT = `${HTTP_ROOT}/media`;
@@ -14,20 +14,172 @@ let activePromptIntrusionId = null;
 let suspiciousActionInProgress = false;
 let historySelectionId = null;
 let selectedIntrusionId = null;
+let metricsViewMode = 'current';
+let distanceBaseline = null;
+let previousVibration = null;
 
 const chartHistory = {
-    climate: [],
-    security: []
+    temperature: [],
+    humidity: [],
+    distance: [],
+    acceleration: [],
+    vibration: []
 };
 
-google.charts.load('current', { packages: ['corechart'] });
+google.charts.load('current', { packages: ['corechart', 'gauge'] });
 google.charts.setOnLoadCallback(() => {
-    drawClimateChart();
-    drawSecurityChart();
+    drawAllMetricCharts();
 });
 
 function qs(id) {
     return document.getElementById(id);
+}
+
+function safeNumber(value) {
+    const num = Number(value);
+    return Number.isFinite(num) ? num : null;
+}
+
+function formatMetricNumber(value, digits = 1) {
+    const num = safeNumber(value);
+    return num === null ? '--' : num.toFixed(digits);
+}
+
+function getDistanceDirectionInfo(current, baseline) {
+    if (current === null || baseline === null) {
+        return {
+            text: 'Waiting for baseline',
+            className: 'text-bg-secondary',
+            deltaText: '--'
+        };
+    }
+
+    const delta = current - baseline;
+
+    if (Math.abs(delta) < 0.5) {
+        return {
+            text: 'At Baseline Distance',
+            className: 'text-bg-info',
+            deltaText: `${delta.toFixed(1)} cm`
+        };
+    }
+
+    if (delta > 0) {
+        return {
+            text: 'Farther Than Initial',
+            className: 'text-bg-warning',
+            deltaText: `+${delta.toFixed(1)} cm`
+        };
+    }
+
+    return {
+        text: 'Closer Than Initial',
+        className: 'text-bg-success',
+        deltaText: `${delta.toFixed(1)} cm`
+    };
+}
+
+function getAccelerationDirection(x, y) {
+    const ax = safeNumber(x);
+    const ay = safeNumber(y);
+
+    if (ax === null || ay === null) {
+        return {
+            label: 'Direction Unknown',
+            arrow: '•',
+            badgeClass: 'text-bg-secondary'
+        };
+    }
+
+    if (Math.abs(ax) < 0.05 && Math.abs(ay) < 0.05) {
+        return {
+            label: 'Minimal Movement',
+            arrow: '•',
+            badgeClass: 'text-bg-info'
+        };
+    }
+
+    if (Math.abs(ax) >= Math.abs(ay)) {
+        if (ax > 0) {
+            return {
+                label: 'Rightward Movement',
+                arrow: '→',
+                badgeClass: 'text-bg-warning'
+            };
+        }
+
+        return {
+            label: 'Leftward Movement',
+            arrow: '←',
+            badgeClass: 'text-bg-warning'
+        };
+    }
+
+    if (ay > 0) {
+        return {
+            label: 'Forward / Upward Movement',
+            arrow: '↑',
+            badgeClass: 'text-bg-danger'
+        };
+    }
+
+    return {
+        label: 'Backward / Downward Movement',
+        arrow: '↓',
+        badgeClass: 'text-bg-danger'
+    };
+}
+
+function getVibrationChangeInfo(current, previous) {
+    if (current === null) {
+        return {
+            stateText: 'No Data',
+            stateClass: 'text-bg-secondary',
+            deltaText: '--'
+        };
+    }
+
+    if (previous === null) {
+        return {
+            stateText: 'Baseline Captured',
+            stateClass: 'text-bg-info',
+            deltaText: '--'
+        };
+    }
+
+    const delta = current - previous;
+
+    if (Math.abs(delta) < 0.05) {
+        return {
+            stateText: 'Stable',
+            stateClass: 'text-bg-success',
+            deltaText: delta.toFixed(2)
+        };
+    }
+
+    if (delta > 0) {
+        return {
+            stateText: 'Vibration Increased',
+            stateClass: 'text-bg-danger',
+            deltaText: `+${delta.toFixed(2)}`
+        };
+    }
+
+    return {
+        stateText: 'Vibration Decreased',
+        stateClass: 'text-bg-warning',
+        deltaText: delta.toFixed(2)
+    };
+}
+
+function addHistoryPoint(series, value, ts) {
+    if (value === null) return;
+
+    series.push([new Date(ts || Date.now()), value]);
+
+    if (series.length > 40) {
+        series.shift();
+    }
 }
 
 function formatDateTime(ts) {
@@ -165,83 +317,168 @@ function updateSensorPills(status) {
 
 function pushMetricHistory(status) {
     const last = status?.last || {};
+    const baseline = status?.baseline || {};
+    const ts = status?.ts || Date.now();
 
-    chartHistory.climate.push([
-        new Date(status.ts || Date.now()),
-        Number(last.temperatureC ?? null),
-        Number(last.humidity ?? null)
-    ]);
+    const temperature = safeNumber(last.temperatureC);
+    const humidity = safeNumber(last.humidity);
+    const distance = safeNumber(last.distanceCm);
+    const vibration = safeNumber(last.vibration);
+    const accelMag = safeNumber(last.accelMag);
 
-    chartHistory.security.push([
-        new Date(status.ts || Date.now()),
-        Number(last.distanceCm ?? null),
-        Number(last.vibration ?? null),
-        Number(last.accelMag ?? null)
-    ]);
+    addHistoryPoint(chartHistory.temperature, temperature, ts);
+    addHistoryPoint(chartHistory.humidity, humidity, ts);
+    addHistoryPoint(chartHistory.distance, distance, ts);
+    addHistoryPoint(chartHistory.vibration, vibration, ts);
+    addHistoryPoint(chartHistory.acceleration, accelMag, ts);
 
-    if (chartHistory.climate.length > 20) {
-        chartHistory.climate.shift();
-    }
-
-    if (chartHistory.security.length > 20) {
-        chartHistory.security.shift();
-    }
+    distanceBaseline = safeNumber(baseline.distanceCm);
 }
 
 function updateMetricCards(status) {
     const last = status?.last || {};
+    const baseline = status?.baseline || {};
 
-    qs('metricTemperature').textContent = last.temperatureC ?? '--';
-    qs('metricHumidity').textContent = last.humidity ?? '--';
-    qs('metricDistance').textContent = last.distanceCm ?? '--';
-    qs('metricAccel').textContent = last.accelMag ?? '--';
+    const temperature = safeNumber(last.temperatureC);
+    const humidity = safeNumber(last.humidity);
+    const distance = safeNumber(last.distanceCm);
+    const vibration = safeNumber(last.vibration);
+    const accelMag = safeNumber(last.accelMag);
+
+    const accelX = safeNumber(last.accelX ?? last.x ?? last.accelerationX);
+    const accelY = safeNumber(last.accelY ?? last.y ?? last.accelerationY);
+    const accelZ = safeNumber(last.accelZ ?? last.z ?? last.accelerationZ);
+
+    distanceBaseline = safeNumber(baseline.distanceCm);
+    const baselineCapturedAt = baseline?.capturedAt || null;
+
+    qs('metricTemperature').textContent = formatMetricNumber(temperature, 1);
+    qs('metricHumidity').textContent = formatMetricNumber(humidity, 1);
+    qs('metricDistance').textContent = formatMetricNumber(distance, 1);
+    qs('metricAccel').textContent = formatMetricNumber(accelMag, 2);
+    qs('metricVibration').textContent = formatMetricNumber(vibration, 2);
+
+    qs('metricDistanceInitial').textContent = distanceBaseline === null
+        ? '--'
+        : `${distanceBaseline.toFixed(1)} cm`;
+
+    qs('metricDistanceCapturedAt').textContent = baselineCapturedAt
+        ? formatDateTime(baselineCapturedAt)
+        : '--';
+
+    const distanceInfo = getDistanceDirectionInfo(distance, distanceBaseline);
+    qs('metricDistanceDelta').textContent = distanceInfo.deltaText;
+    qs('metricDistanceDirection').className = `badge status-chip ${distanceInfo.className}`;
+    qs('metricDistanceDirection').textContent = distanceInfo.text;
+
+    const accelDirection = getAccelerationDirection(accelX, accelY);
+    qs('metricAccelArrow').textContent = accelDirection.arrow;
+    qs('metricAccelDirection').className = `badge status-chip ${accelDirection.badgeClass}`;
+    qs('metricAccelDirection').textContent = accelDirection.label;
+    qs('metricAccelVector').textContent =
+        `X: ${formatMetricNumber(accelX, 2)} | Y: ${formatMetricNumber(accelY, 2)} | Z: ${formatMetricNumber(accelZ, 2)}`;
+
+    qs('metricVibrationPrevious').textContent = previousVibration === null
+        ? '--'
+        : previousVibration.toFixed(2);
+
+    const vibrationInfo = getVibrationChangeInfo(vibration, previousVibration);
+    qs('metricVibrationDelta').textContent = vibrationInfo.deltaText;
+    qs('metricVibrationState').className = `badge status-chip ${vibrationInfo.stateClass}`;
+    qs('metricVibrationState').textContent = vibrationInfo.stateText;
+
+    previousVibration = vibration;
 }
 
-function drawClimateChart() {
-    const container = qs('climateChart');
+function drawGauge(containerId, label, value, min, max, yellowFrom, yellowTo, redFrom, redTo) {
+    const container = qs(containerId);
+    if (!container || !google.visualization) return;
+
+    const data = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        [label, value ?? 0]
+    ]);
+
+    const chart = new google.visualization.Gauge(container);
+    chart.draw(data, {
+        width: '100%',
+        height: 240,
+        min,
+        max,
+        yellowFrom,
+        yellowTo,
+        redFrom,
+        redTo,
+        minorTicks: 5
+    });
+}
+
+function drawSingleTrendChart(containerId, label, series, minValue = null, maxValue = null) {
+    const container = qs(containerId);
     if (!container || !google.visualization) return;
 
     const data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time');
-    data.addColumn('number', 'Temperature (°C)');
-    data.addColumn('number', 'Humidity (%)');
+    data.addColumn('number', label);
 
-    if (chartHistory.climate.length) {
-        data.addRows(chartHistory.climate);
+    if (series.length) {
+        data.addRows(series);
     }
 
-    const chart = new google.visualization.LineChart(container);
-    chart.draw(data, {
+    const options = {
         backgroundColor: '#111827',
-        chartArea: { left: 50, right: 20, top: 20, bottom: 50 },
-        legend: { textStyle: { color: '#e2e8f0' } },
-        hAxis: { textStyle: { color: '#94a3b8' }, gridlines: { color: '#1f2937' } },
-        vAxis: { textStyle: { color: '#94a3b8' }, gridlines: { color: '#1f2937' } }
-    });
+        chartArea: { left: 55, right: 20, top: 20, bottom: 50 },
+        legend: { position: 'none' },
+        hAxis: {
+            textStyle: { color: '#94a3b8' },
+            gridlines: { color: '#1f2937' }
+        },
+        vAxis: {
+            textStyle: { color: '#94a3b8' },
+            gridlines: { color: '#1f2937' },
+            viewWindow: {
+                min: minValue,
+                max: maxValue
+            }
+        }
+    };
+
+    const chart = new google.visualization.LineChart(container);
+    chart.draw(data, options);
 }
 
-function drawSecurityChart() {
-    const container = qs('securityChart');
-    if (!container || !google.visualization) return;
+function drawAllMetricCharts() {
+    const last = currentStatus?.last || {};
 
-    const data = new google.visualization.DataTable();
-    data.addColumn('datetime', 'Time');
-    data.addColumn('number', 'Distance (cm)');
-    data.addColumn('number', 'Vibration');
-    data.addColumn('number', 'Acceleration');
+    drawGauge(
+        'temperatureGauge',
+        'Temp',
+        safeNumber(last.temperatureC),
+        0,
+        45,
+        18,
+        28,
+        32,
+        45
+    );
 
-    if (chartHistory.security.length) {
-        data.addRows(chartHistory.security);
-    }
+    drawGauge(
+        'humidityGauge',
+        'Humidity',
+        safeNumber(last.humidity),
+        0,
+        100,
+        30,
+        60,
+        75,
+        100
+    );
 
-    const chart = new google.visualization.LineChart(container);
-    chart.draw(data, {
-        backgroundColor: '#111827',
-        chartArea: { left: 50, right: 20, top: 20, bottom: 50 },
-        legend: { textStyle: { color: '#e2e8f0' } },
-        hAxis: { textStyle: { color: '#94a3b8' }, gridlines: { color: '#1f2937' } },
-        vAxis: { textStyle: { color: '#94a3b8' }, gridlines: { color: '#1f2937' } }
-    });
+    drawSingleTrendChart('temperatureTrendChart', 'Temperature (°C)', chartHistory.temperature);
+    drawSingleTrendChart('humidityTrendChart', 'Humidity (%)', chartHistory.humidity, 0, 100);
+    drawSingleTrendChart('distanceTrendChart', 'Distance (cm)', chartHistory.distance);
+    drawSingleTrendChart('accelTrendChart', 'Acceleration', chartHistory.acceleration);
+    drawSingleTrendChart('vibrationTrendChart', 'Vibration', chartHistory.vibration);
 }
 
 function groupEventsByIntrusion(events = []) {
@@ -583,10 +820,9 @@ async function getStatus() {
         setSystemStateBadge(currentState);
         updateActionButtons();
         updateSensorPills(data);
-        updateMetricCards(data);
         pushMetricHistory(data);
-        drawClimateChart();
-        drawSecurityChart();
+        updateMetricCards(data);
+        drawAllMetricCharts();
         handleSuspiciousActivityPrompt(data);
     } catch (error) {
         console.error('Error fetching status:', error);
@@ -843,9 +1079,10 @@ function initEventHandlers() {
         await saveSettings();
     });
 
+    initMetricsViewToggle();
+
     window.addEventListener('resize', () => {
-        drawClimateChart();
-        drawSecurityChart();
+        drawAllMetricCharts();
     });
 }
 
@@ -855,6 +1092,40 @@ async function initialLoad() {
         getLiveFeed(),
         getSettings()
     ]);
+}
+
+function setMetricsViewMode(mode) {
+    metricsViewMode = mode;
+
+    const currentBtn = qs('metricsCurrentToggle');
+    const trendBtn = qs('metricsTrendToggle');
+    const currentView = qs('metricsCurrentView');
+    const trendView = qs('metricsTrendView');
+
+    const isCurrent = mode === 'current';
+
+    currentBtn.classList.toggle('btn-primary', isCurrent);
+    currentBtn.classList.toggle('btn-outline-light', !isCurrent);
+    currentBtn.classList.toggle('active', isCurrent);
+
+    trendBtn.classList.toggle('btn-primary', !isCurrent);
+    trendBtn.classList.toggle('btn-outline-light', isCurrent);
+    trendBtn.classList.toggle('active', !isCurrent);
+
+    currentView.classList.toggle('d-none', !isCurrent);
+    trendView.classList.toggle('d-none', isCurrent);
+
+    drawAllMetricCharts();
+}
+
+function initMetricsViewToggle() {
+    qs('metricsCurrentToggle')?.addEventListener('click', () => {
+        setMetricsViewMode('current');
+    });
+
+    qs('metricsTrendToggle')?.addEventListener('click', () => {
+        setMetricsViewMode('trend');
+    });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
