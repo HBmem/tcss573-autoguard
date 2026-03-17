@@ -30,14 +30,13 @@
             "c493a96ad53dfc0d",
             "38d9086a2977fa73",
             "459424595753cf62",
-            "e16a31d51c76621e",
             "2ceda20c5bfc9df6",
             "76f49feef62a3798"
         ],
         "x": 28,
-        "y": 19,
-        "w": 1264,
-        "h": 988
+        "y": 13,
+        "w": 1604,
+        "h": 1114
     },
     {
         "id": "73bca6c267ce7e72",
@@ -58,9 +57,9 @@
             "0608b5f4d7a72b5a",
             "be9c8d8a9e47d8d2"
         ],
-        "x": 1308,
-        "y": 19,
-        "w": 744,
+        "x": 1668,
+        "y": 39,
+        "w": 764,
         "h": 508
     },
     {
@@ -82,8 +81,8 @@
             "b504de31678f72cd",
             "aad72eeb907091b5"
         ],
-        "x": 1308,
-        "y": 539,
+        "x": 1608,
+        "y": 599,
         "w": 1284,
         "h": 428
     },
@@ -109,10 +108,34 @@
             "2dc032b30fb2cdf3",
             "ce7e83e4ad2de9f6"
         ],
-        "x": 28,
-        "y": 1019,
-        "w": 1364,
+        "x": -22,
+        "y": 1179,
+        "w": 1434,
         "h": 568
+    },
+    {
+        "id": "9379380a7711d644",
+        "type": "group",
+        "z": "0e992f61a706eb58",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d6f33d740f37f66b",
+            "3053a935888cd15a",
+            "ddbc521e6b96d5b1",
+            "0299c5d668ee9060"
+        ],
+        "x": 1448,
+        "y": 1179,
+        "w": 1244,
+        "h": 488
     },
     {
         "id": "dfaa92d4dd849eab",
@@ -131,12 +154,19 @@
         "nodes": [
             "6207ffa8f84e5c6a",
             "0b0a2730b9605d76",
-            "0b878342b55230f2"
+            "0b878342b55230f2",
+            "92ab57336f24a2b1",
+            "bc9c4ed65d645351",
+            "8665a853120955ad",
+            "e16a31d51c76621e",
+            "ddbdb1ef343e5496",
+            "a0e2d66d6941a5fb",
+            "4ff4a31665e1aecb"
         ],
         "x": 54,
-        "y": 79,
-        "w": 452,
-        "h": 122
+        "y": 39,
+        "w": 792,
+        "h": 302
     },
     {
         "id": "75f65aa6282bdbfe",
@@ -159,8 +189,8 @@
             "3e7c290b44363b6b",
             "511e97e419be5a46"
         ],
-        "x": 54,
-        "y": 219,
+        "x": 214,
+        "y": 339,
         "w": 872,
         "h": 137
     },
@@ -184,8 +214,8 @@
             "1f6857ce7e2b2c23",
             "dda0923130ab8939"
         ],
-        "x": 54,
-        "y": 379,
+        "x": 214,
+        "y": 499,
         "w": 672,
         "h": 122
     },
@@ -210,8 +240,8 @@
             "e85567546df25f38",
             "0b351037472e36e4"
         ],
-        "x": 54,
-        "y": 519,
+        "x": 214,
+        "y": 639,
         "w": 952,
         "h": 137
     },
@@ -236,8 +266,8 @@
             "65f4a64fb60f38bc",
             "6f855d6da668d3ef"
         ],
-        "x": 54,
-        "y": 679,
+        "x": 214,
+        "y": 799,
         "w": 1052,
         "h": 137
     },
@@ -262,9 +292,9 @@
             "d1221e354410fc66",
             "500ce2f7ea2429e1"
         ],
-        "x": 1334,
-        "y": 79,
-        "w": 692,
+        "x": 1694,
+        "y": 99,
+        "w": 712,
         "h": 142
     },
     {
@@ -287,8 +317,8 @@
             "bf5c2108be768111",
             "6071d58d4a545640"
         ],
-        "x": 1334,
-        "y": 239,
+        "x": 1694,
+        "y": 259,
         "w": 622,
         "h": 122
     },
@@ -312,8 +342,8 @@
             "aea31bc84326236c",
             "672abb38db405708"
         ],
-        "x": 1334,
-        "y": 379,
+        "x": 1694,
+        "y": 399,
         "w": 652,
         "h": 122
     },
@@ -338,8 +368,8 @@
             "5921bbfc575a0b88",
             "9c0cfaf36b5bffab"
         ],
-        "x": 1334,
-        "y": 599,
+        "x": 1634,
+        "y": 659,
         "w": 1012,
         "h": 122
     },
@@ -361,8 +391,8 @@
             "98eba2328ce0078a",
             "ced47629dad00272"
         ],
-        "x": 1334,
-        "y": 739,
+        "x": 1634,
+        "y": 799,
         "w": 212,
         "h": 122
     },
@@ -392,8 +422,8 @@
             "e56f211f1a234d45",
             "f3b5737469a0ae23"
         ],
-        "x": 1574,
-        "y": 739,
+        "x": 1874,
+        "y": 799,
         "w": 992,
         "h": 202
     },
@@ -418,8 +448,8 @@
             "03ad7b18a394a83b",
             "b98f28c74f086922"
         ],
-        "x": 54,
-        "y": 1079,
+        "x": 74,
+        "y": 1239,
         "w": 512,
         "h": 169.5
     },
@@ -444,9 +474,9 @@
             "faa613d260876a51",
             "52c952ec42fbd7ca"
         ],
-        "x": 594,
-        "y": 1079,
-        "w": 612,
+        "x": 614,
+        "y": 1239,
+        "w": 602,
         "h": 162
     },
     {
@@ -467,11 +497,13 @@
             "9920a4a96963e478",
             "9932d1a9eb8e9e30",
             "b5f96ecabad2153e",
-            "8cae70e72de3e1f6"
+            "8cae70e72de3e1f6",
+            "81d22a8a4b08a54e",
+            "ff48a20042e2d68a"
         ],
-        "x": 54,
-        "y": 1259,
-        "w": 572,
+        "x": 4,
+        "y": 1419,
+        "w": 592,
         "h": 122
     },
     {
@@ -498,8 +530,8 @@
             "93a285a031db5877",
             "ad1c7710ab01be2b"
         ],
-        "x": 654,
-        "y": 1259,
+        "x": 674,
+        "y": 1419,
         "w": 712,
         "h": 162
     },
@@ -523,8 +555,8 @@
             "86b8ac629d80c35d",
             "2d7dc0470413a8de"
         ],
-        "x": 534,
-        "y": 79,
+        "x": 874,
+        "y": 199,
         "w": 732,
         "h": 122
     },
@@ -550,8 +582,8 @@
             "ca2f6d1e9ece927b",
             "e18476dae9472cd5"
         ],
-        "x": 54,
-        "y": 839,
+        "x": 214,
+        "y": 959,
         "w": 972,
         "h": 142
     },
@@ -575,8 +607,8 @@
             "4f64cea803c823d3",
             "e82b7cfb18701fc0"
         ],
-        "x": 374,
-        "y": 1439,
+        "x": 394,
+        "y": 1599,
         "w": 732,
         "h": 122
     },
@@ -599,8 +631,8 @@
             "dedbe14c1df4bd31",
             "e977007d93a70419"
         ],
-        "x": 54,
-        "y": 1399,
+        "x": 74,
+        "y": 1559,
         "w": 312,
         "h": 122
     },
@@ -626,8 +658,8 @@
             "fbd399cdde11bdfe",
             "2e682f79be89001d"
         ],
-        "x": 1434,
-        "y": 1039,
+        "x": 1474,
+        "y": 1239,
         "w": 1192,
         "h": 122
     },
@@ -653,8 +685,8 @@
             "5df517086efdfe47",
             "ba19471e9916b696"
         ],
-        "x": 1434,
-        "y": 1179,
+        "x": 1474,
+        "y": 1379,
         "w": 1172,
         "h": 122
     },
@@ -678,34 +710,10 @@
             "dbb8f9c1e900f0d1",
             "4f97c6f6862eb0f4"
         ],
-        "x": 1434,
-        "y": 1319,
+        "x": 1474,
+        "y": 1519,
         "w": 752,
         "h": 122
-    },
-    {
-        "id": "9379380a7711d644",
-        "type": "group",
-        "z": "0e992f61a706eb58",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "d6f33d740f37f66b",
-            "3053a935888cd15a",
-            "ddbc521e6b96d5b1",
-            "0299c5d668ee9060"
-        ],
-        "x": 1408,
-        "y": 979,
-        "w": 1244,
-        "h": 488
     },
     {
         "id": "mqtt_broker_pi1",
@@ -745,7 +753,10 @@
         "name": "InfluxDB (Pi1)",
         "usetls": false,
         "tls": "",
-        "influxdbVersion": "1.x"
+        "influxdbVersion": "2.0",
+        "url": "https://efeilr8eqm-sngx6nimmoesju.timestream-influxdb.us-east-2.on.aws:8086",
+        "timeout": "",
+        "rejectUnauthorized": false
     },
     {
         "id": "fdb931804d668213",
@@ -837,6 +848,37 @@
         "groupType": "default"
     },
     {
+        "id": "b7bc8d757e62072b",
+        "type": "mqtt-broker",
+        "name": "Azure IoT Hub",
+        "broker": "tcss573-junjia.azure-devices.net",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "0b0a2730b9605d76",
         "type": "inject",
         "z": "0e992f61a706eb58",
@@ -849,10 +891,12 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 170,
-        "y": 160,
+        "y": 280,
         "wires": [
             [
-                "0b878342b55230f2"
+                "0b878342b55230f2",
+                "92ab57336f24a2b1",
+                "ddbdb1ef343e5496"
             ]
         ]
     },
@@ -869,8 +913,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 160,
+        "x": 460,
+        "y": 300,
         "wires": [
             []
         ]
@@ -884,10 +928,9 @@
         "url": "/api/arm",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 160,
-        "y": 300,
+        "x": 320,
+        "y": 420,
         "wires": [
             [
                 "3e7c290b44363b6b"
@@ -907,8 +950,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 300,
+        "x": 760,
+        "y": 420,
         "wires": [
             [
                 "511e97e419be5a46"
@@ -932,8 +975,8 @@
         "name": "Arm Response",
         "statusCode": "",
         "headers": {},
-        "x": 820,
-        "y": 260,
+        "x": 980,
+        "y": 380,
         "wires": []
     },
     {
@@ -951,8 +994,8 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 1120,
-        "y": 360,
+        "x": 1280,
+        "y": 480,
         "wires": []
     },
     {
@@ -965,8 +1008,8 @@
         "links": [
             "046dc45923aa5596"
         ],
-        "x": 1025,
-        "y": 420,
+        "x": 1185,
+        "y": 540,
         "wires": []
     },
     {
@@ -978,10 +1021,9 @@
         "url": "/api/status",
         "method": "get",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 160,
-        "y": 460,
+        "x": 320,
+        "y": 580,
         "wires": [
             [
                 "ea91053b0fb8900e"
@@ -1001,8 +1043,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 460,
+        "x": 540,
+        "y": 580,
         "wires": [
             [
                 "1f6857ce7e2b2c23"
@@ -1017,8 +1059,8 @@
         "name": "Status Response",
         "statusCode": "",
         "headers": {},
-        "x": 610,
-        "y": 460,
+        "x": 770,
+        "y": 580,
         "wires": []
     },
     {
@@ -1030,10 +1072,9 @@
         "url": "/api/resolve",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 170,
-        "y": 600,
+        "x": 330,
+        "y": 720,
         "wires": [
             [
                 "f6fe70541e8bda69"
@@ -1049,8 +1090,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 410,
-        "y": 600,
+        "x": 570,
+        "y": 720,
         "wires": [
             [
                 "ce0dd89034e3f85a"
@@ -1070,8 +1111,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 600,
+        "x": 820,
+        "y": 720,
         "wires": [
             [
                 "0b351037472e36e4"
@@ -1093,8 +1134,8 @@
         "name": "Resolve Response",
         "statusCode": "",
         "headers": {},
-        "x": 890,
-        "y": 580,
+        "x": 1050,
+        "y": 700,
         "wires": []
     },
     {
@@ -1107,8 +1148,8 @@
         "links": [
             "03ad7b18a394a83b"
         ],
-        "x": 1025,
-        "y": 460,
+        "x": 1185,
+        "y": 580,
         "wires": []
     },
     {
@@ -1121,8 +1162,8 @@
         "links": [
             "9920a4a96963e478"
         ],
-        "x": 1025,
-        "y": 500,
+        "x": 1185,
+        "y": 620,
         "wires": []
     },
     {
@@ -1134,10 +1175,9 @@
         "url": "/api/trigger-alarm",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 180,
-        "y": 760,
+        "x": 340,
+        "y": 880,
         "wires": [
             [
                 "eb78f533eb9a17d3"
@@ -1153,8 +1193,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 440,
-        "y": 760,
+        "x": 600,
+        "y": 880,
         "wires": [
             [
                 "b3ecbf97c400be84"
@@ -1174,8 +1214,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 760,
+        "x": 870,
+        "y": 880,
         "wires": [
             [
                 "6f855d6da668d3ef"
@@ -1197,8 +1237,8 @@
         "name": "Trigger Alarm Response",
         "statusCode": "",
         "headers": {},
-        "x": 970,
-        "y": 740,
+        "x": 1130,
+        "y": 860,
         "wires": []
     },
     {
@@ -1209,7 +1249,7 @@
         "name": "Initialization",
         "info": "",
         "x": 170,
-        "y": 120,
+        "y": 140,
         "wires": []
     },
     {
@@ -1219,8 +1259,8 @@
         "g": "75f65aa6282bdbfe",
         "name": "Arm/Disarm",
         "info": "",
-        "x": 150,
-        "y": 260,
+        "x": 310,
+        "y": 380,
         "wires": []
     },
     {
@@ -1232,8 +1272,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 370,
-        "y": 300,
+        "x": 530,
+        "y": 420,
         "wires": [
             [
                 "4bcc2a14d33814a7"
@@ -1247,8 +1287,8 @@
         "g": "c493a96ad53dfc0d",
         "name": "Status",
         "info": "",
-        "x": 130,
-        "y": 420,
+        "x": 290,
+        "y": 540,
         "wires": []
     },
     {
@@ -1258,8 +1298,8 @@
         "g": "38d9086a2977fa73",
         "name": "Resolve",
         "info": "",
-        "x": 140,
-        "y": 560,
+        "x": 300,
+        "y": 680,
         "wires": []
     },
     {
@@ -1269,19 +1309,19 @@
         "g": "459424595753cf62",
         "name": "Force Alarm",
         "info": "",
-        "x": 150,
-        "y": 720,
+        "x": 310,
+        "y": 840,
         "wires": []
     },
     {
         "id": "e16a31d51c76621e",
         "type": "comment",
         "z": "0e992f61a706eb58",
-        "g": "5cc691194be3a9d8",
+        "g": "dfaa92d4dd849eab",
         "name": "PI1 - Core State & API",
         "info": "",
-        "x": 160,
-        "y": 60,
+        "x": 200,
+        "y": 80,
         "wires": []
     },
     {
@@ -1290,13 +1330,13 @@
         "z": "0e992f61a706eb58",
         "g": "6229e595b7e29330",
         "name": "Climate Sensor",
-        "interval": "5",
+        "interval": "60",
         "unit": "s",
         "pin": "7",
         "sensorname": "DHT11",
         "sensorid": "dht11.1",
-        "x": 1440,
-        "y": 160,
+        "x": 1800,
+        "y": 180,
         "wires": [
             [
                 "e0185a457c0f36cb"
@@ -1309,15 +1349,15 @@
         "z": "0e992f61a706eb58",
         "g": "6229e595b7e29330",
         "name": "Format Climate Reading",
-        "func": "/**\n * Normalize DHT11 output and keep latest climate values in flow context.\n */\nconst now = Date.now();\nconst temperatureC = Number(msg.payload[0]);\nconst humidity = Number(msg.payload[1]);\n\nconst last = flow.get(\"last\") || {};\nlast.temperatureC = temperatureC;\nlast.humidity = humidity;\nlast.climateAt = now;\nflow.set(\"last\", last);\n\nnode.send([\n    {\n        payload: {\n            measurement: \"vehicle_climate\",\n            tags: {\n                device: \"pi1\",\n                sensor: \"dht11\"\n            },\n            fields: {\n                temperatureC,\n                humidity\n            },\n            timestamp: new Date(now)\n        }\n    },\n    {\n        payload: {\n            sensor: \"dht11\",\n            temperatureC,\n            humidity,\n            ts: now\n        }\n    }\n]);\n\nreturn null;",
+        "func": "/**\n * Normalize DHT11 output and keep latest climate values in flow context.\n */\nconst now = Date.now();\nconst temperatureC = Number(msg.payload[0]);\nconst humidity = Number(msg.payload[1]);\n\nconst last = flow.get(\"last\") || {};\nlast.temperatureC = temperatureC;\nlast.humidity = humidity;\nlast.climateAt = now;\nflow.set(\"last\", last);\n\nnode.send([\n    {\n        payload: {        // flat field values only\n            temperatureC,\n            humidity\n        },\n        tags: {           // tags go here, not inside payload\n            device: \"pi1\",\n            sensor: \"dht11\"\n        },\n        timestamp: new Date(now)\n    },\n    {\n        payload: {\n            sensor: \"dht11\",\n            temperatureC,\n            humidity,\n            ts: now\n        }\n    }\n]);\n\nreturn null;",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
-        "y": 160,
+        "x": 2030,
+        "y": 180,
         "wires": [
             [
                 "be6b498ae29ffb92"
@@ -1334,8 +1374,8 @@
         "g": "73bca6c267ce7e72",
         "name": "PI1 - Local Sensors",
         "info": "",
-        "x": 1430,
-        "y": 60,
+        "x": 1790,
+        "y": 80,
         "wires": []
     },
     {
@@ -1343,7 +1383,7 @@
         "type": "influxdb out",
         "z": "0e992f61a706eb58",
         "g": "6229e595b7e29330",
-        "influxdb": "",
+        "influxdb": "influx_cfg_pi1",
         "name": "Climate Metrics Out",
         "measurement": "vehicle_climate",
         "precision": "",
@@ -1351,9 +1391,9 @@
         "database": "database",
         "precisionV18FluxV20": "ms",
         "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 1910,
+        "org": "uwt-iot",
+        "bucket": "iot-influxDB",
+        "x": 2280,
         "y": 140,
         "wires": []
     },
@@ -1365,8 +1405,8 @@
         "name": "To Dashboard Metrics",
         "mode": "link",
         "links": [],
-        "x": 1835,
-        "y": 180,
+        "x": 2195,
+        "y": 200,
         "wires": []
     },
     {
@@ -1381,8 +1421,8 @@
         "pin": "5",
         "sensorname": "Ultrasonic Ranger",
         "sensorid": "grovepi.ultrasonic-ranger.1",
-        "x": 1470,
-        "y": 320,
+        "x": 1830,
+        "y": 340,
         "wires": [
             [
                 "abd2ccc7d536c490"
@@ -1402,8 +1442,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1740,
-        "y": 320,
+        "x": 2100,
+        "y": 340,
         "wires": [
             [
                 "bf5c2108be768111"
@@ -1420,8 +1460,8 @@
         "links": [
             "ced47629dad00272"
         ],
-        "x": 1915,
-        "y": 320,
+        "x": 2275,
+        "y": 340,
         "wires": []
     },
     {
@@ -1433,8 +1473,8 @@
         "links": [
             "1e6ecf529f287354"
         ],
-        "x": 1375,
-        "y": 460,
+        "x": 1735,
+        "y": 480,
         "wires": [
             [
                 "72306b47b1bb7e82"
@@ -1454,8 +1494,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
-        "y": 460,
+        "x": 1920,
+        "y": 480,
         "wires": [
             [
                 "aea31bc84326236c"
@@ -1477,8 +1517,8 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 1840,
-        "y": 460,
+        "x": 2200,
+        "y": 480,
         "wires": []
     },
     {
@@ -1488,8 +1528,8 @@
         "g": "6229e595b7e29330",
         "name": "Climate",
         "info": "",
-        "x": 1410,
-        "y": 120,
+        "x": 1770,
+        "y": 140,
         "wires": []
     },
     {
@@ -1499,8 +1539,8 @@
         "g": "0608b5f4d7a72b5a",
         "name": "Distance",
         "info": "",
-        "x": 1420,
-        "y": 280,
+        "x": 1780,
+        "y": 300,
         "wires": []
     },
     {
@@ -1510,8 +1550,8 @@
         "g": "be9c8d8a9e47d8d2",
         "name": "Baseline Capture",
         "info": "",
-        "x": 1440,
-        "y": 420,
+        "x": 1800,
+        "y": 440,
         "wires": []
     },
     {
@@ -1521,8 +1561,8 @@
         "g": "c07101037867795b",
         "name": "PI1 - Pi2 Intake & Detection",
         "info": "",
-        "x": 1460,
-        "y": 580,
+        "x": 1760,
+        "y": 640,
         "wires": []
     },
     {
@@ -1539,8 +1579,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1460,
-        "y": 680,
+        "x": 1760,
+        "y": 740,
         "wires": [
             [
                 "2c91b78b561f1c10"
@@ -1556,8 +1596,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 1690,
-        "y": 680,
+        "x": 1990,
+        "y": 740,
         "wires": [
             [
                 "c2c555de1b5b0a6c"
@@ -1577,8 +1617,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1940,
-        "y": 680,
+        "x": 2240,
+        "y": 740,
         "wires": [
             [
                 "45716de8bb60743b"
@@ -1594,8 +1634,8 @@
         "links": [
             "bf5c2108be768111"
         ],
-        "x": 1375,
-        "y": 820,
+        "x": 1675,
+        "y": 880,
         "wires": [
             [
                 "45716de8bb60743b"
@@ -1615,8 +1655,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2210,
-        "y": 680,
+        "x": 2510,
+        "y": 740,
         "wires": [
             [
                 "e339ee3e7f926e14"
@@ -1651,8 +1691,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 1700,
-        "y": 880,
+        "x": 2000,
+        "y": 940,
         "wires": [
             [
                 "be754b1a8f482a59",
@@ -1689,8 +1729,8 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 2410,
-        "y": 820,
+        "x": 2710,
+        "y": 880,
         "wires": []
     },
     {
@@ -1708,8 +1748,8 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 2420,
-        "y": 880,
+        "x": 2720,
+        "y": 940,
         "wires": []
     },
     {
@@ -1722,8 +1762,8 @@
         "links": [
             "03ad7b18a394a83b"
         ],
-        "x": 1955,
-        "y": 860,
+        "x": 2255,
+        "y": 920,
         "wires": []
     },
     {
@@ -1736,8 +1776,8 @@
         "links": [
             "9920a4a96963e478"
         ],
-        "x": 895,
-        "y": 1380,
+        "x": 915,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1750,8 +1790,8 @@
         "links": [
             "4fa12711f176e1bb"
         ],
-        "x": 1955,
-        "y": 900,
+        "x": 2255,
+        "y": 960,
         "wires": []
     },
     {
@@ -1761,8 +1801,8 @@
         "g": "93149a58644b3b8a",
         "name": "Pi 2 Intake",
         "info": "",
-        "x": 1420,
-        "y": 640,
+        "x": 1720,
+        "y": 700,
         "wires": []
     },
     {
@@ -1772,8 +1812,8 @@
         "g": "b504de31678f72cd",
         "name": "Ultrasonic Intake",
         "info": "",
-        "x": 1440,
-        "y": 780,
+        "x": 1740,
+        "y": 840,
         "wires": []
     },
     {
@@ -1783,8 +1823,8 @@
         "g": "aad72eeb907091b5",
         "name": "Detection Routing",
         "info": "",
-        "x": 1690,
-        "y": 820,
+        "x": 1990,
+        "y": 880,
         "wires": []
     },
     {
@@ -1794,8 +1834,8 @@
         "g": "ef1e886f28df8d51",
         "name": "PI1 - Alarm, Camera & Persistence",
         "info": "",
-        "x": 200,
-        "y": 1060,
+        "x": 220,
+        "y": 1220,
         "wires": []
     },
     {
@@ -1808,8 +1848,8 @@
             "1ca53671077d195c",
             "c94b4efcf259fe8d"
         ],
-        "x": 95,
-        "y": 1160,
+        "x": 115,
+        "y": 1320,
         "wires": [
             [
                 "dc73d130ee96e626"
@@ -1839,8 +1879,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 240,
-        "y": 1160,
+        "x": 260,
+        "y": 1320,
         "wires": [
             [
                 "f5dc23973c30ac07",
@@ -1865,8 +1905,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 1120,
+        "x": 470,
+        "y": 1280,
         "wires": [
             [
                 "8900cf9202efbd7a"
@@ -1886,8 +1926,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 1200,
+        "x": 470,
+        "y": 1360,
         "wires": [
             [
                 "faa613d260876a51"
@@ -1918,8 +1958,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 690,
-        "y": 1160,
+        "x": 710,
+        "y": 1320,
         "wires": [
             [
                 "f9d162e9615d1636"
@@ -1939,8 +1979,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 1160,
+        "x": 910,
+        "y": 1320,
         "wires": [
             [
                 "faa613d260876a51"
@@ -1957,8 +1997,8 @@
         "g": "c3bc344f2852449d",
         "name": "Alarm Buzzer",
         "pin": "3",
-        "x": 1100,
-        "y": 1120,
+        "x": 1120,
+        "y": 1280,
         "wires": []
     },
     {
@@ -1968,8 +2008,8 @@
         "g": "c3bc344f2852449d",
         "name": "Alarm LED",
         "pin": "4",
-        "x": 1090,
-        "y": 1200,
+        "x": 1110,
+        "y": 1360,
         "wires": []
     },
     {
@@ -1985,8 +2025,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 1340,
+        "x": 810,
+        "y": 1500,
         "wires": [
             [
                 "fe886807dd77d494",
@@ -2013,8 +2053,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Camera Command",
-        "x": 1030,
-        "y": 1340,
+        "x": 1050,
+        "y": 1500,
         "wires": [
             [
                 "0ee56e928c0e6155"
@@ -2038,8 +2078,8 @@
             "7570e2d0c0bc7666",
             "e56f211f1a234d45"
         ],
-        "x": 95,
-        "y": 1340,
+        "x": 45,
+        "y": 1500,
         "wires": [
             [
                 "9932d1a9eb8e9e30"
@@ -2052,15 +2092,15 @@
         "z": "0e992f61a706eb58",
         "g": "7404463c72010353",
         "name": "Build Security Event Point",
-        "func": "/**\n * Save security events with sensor snapshot context.\n * Falls back to the current intrusion record for media paths.\n */\nconst event = msg.event || {};\nconst last = flow.get(\"last\") || {};\nconst baseline = flow.get(\"baseline\") || {};\nconst intrusion = flow.get(\"intrusion\") || {};\n\nconst picturePath = event.picturePath || intrusion.picturePath || \"\";\nconst videoPath = event.videoPath || intrusion.videoPath || \"\";\n\nmsg.payload = {\n    measurement: \"security_events\",\n    tags: {\n        device: \"pi1\",\n        intrusionId: event.intrusionId || \"none\",\n        type: event.type || \"unknown\"\n    },\n    fields: {\n        state: String(event.state || flow.get(\"securityState\") || \"unknown\"),\n        reason: String(event.reason || \"\"),\n        evidence: JSON.stringify(event.evidence || []),\n        picture_path: String(picturePath),\n        video_path: String(videoPath),\n        distance_cm: last.distanceCm ?? null,\n        baseline_cm: baseline.distanceCm ?? null,\n        vibration: last.vibration ?? null,\n        accel_mag: last.accelMag ?? null\n    },\n    timestamp: new Date(event.ts || Date.now())\n};\n\nreturn msg;",
+        "func": "/**\n * Save security events with sensor snapshot context.\n * Falls back to the current intrusion record for media paths.\n */\nconst event = msg.event || {};\nconst last = flow.get(\"last\") || {};\nconst baseline = flow.get(\"baseline\") || {};\nconst intrusion = flow.get(\"intrusion\") || {};\n\nconst picturePath = event.picturePath || intrusion.picturePath || \"\";\nconst videoPath = event.videoPath || intrusion.videoPath || \"\";\n\nmsg.measurement = \"security_events\"; \n\nmsg.tags = {\n    device: \"pi1\",\n    intrusionId: event.intrusionId || \"none\",\n    type: event.type || \"unknown\"\n};\n\nmsg.payload = {\n    intrusionId: String(event.intrusionId || \"none\"), \n    state: String(event.state || flow.get(\"securityState\") || \"unknown\"),\n    reason: String(event.reason || \"\"),\n    evidence: JSON.stringify(event.evidence || []),\n    picture_path: String(picturePath),\n    video_path: String(videoPath),\n    distance_cm: last.distanceCm ?? null,\n    baseline_cm: baseline.distanceCm ?? null,\n    vibration: last.vibration ?? null,\n    accel_mag: last.accelMag ?? null\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
-        "y": 1340,
+        "x": 220,
+        "y": 1500,
         "wires": [
             [
                 "b5f96ecabad2153e"
@@ -2072,7 +2112,7 @@
         "type": "influxdb out",
         "z": "0e992f61a706eb58",
         "g": "7404463c72010353",
-        "influxdb": "",
+        "influxdb": "influx_cfg_pi1",
         "name": "Security Event Out",
         "measurement": "",
         "precision": "",
@@ -2080,10 +2120,10 @@
         "database": "database",
         "precisionV18FluxV20": "ms",
         "retentionPolicyV18Flux": "",
-        "org": "organisation",
-        "bucket": "bucket",
-        "x": 510,
-        "y": 1340,
+        "org": "uwt-iot",
+        "bucket": "iot-influxDB",
+        "x": 460,
+        "y": 1500,
         "wires": []
     },
     {
@@ -2096,8 +2136,8 @@
         "links": [
             "4fa12711f176e1bb"
         ],
-        "x": 965,
-        "y": 1380,
+        "x": 985,
+        "y": 1540,
         "wires": []
     },
     {
@@ -2107,8 +2147,8 @@
         "g": "71c8aa3b6b346885",
         "name": "Alarm Control",
         "info": "",
-        "x": 150,
-        "y": 1120,
+        "x": 170,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2118,8 +2158,8 @@
         "g": "c3bc344f2852449d",
         "name": "Alarm Tick",
         "info": "",
-        "x": 680,
-        "y": 1120,
+        "x": 700,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2129,8 +2169,8 @@
         "g": "6d15c9fd9f5b6e7e",
         "name": "Camera",
         "info": "",
-        "x": 730,
-        "y": 1300,
+        "x": 750,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2140,8 +2180,8 @@
         "g": "7404463c72010353",
         "name": "Persistence",
         "info": "",
-        "x": 150,
-        "y": 1300,
+        "x": 100,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2157,8 +2197,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 820,
+        "x": 2430,
+        "y": 880,
         "wires": [
             [
                 "87c6979873121a16"
@@ -2178,8 +2218,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2140,
-        "y": 880,
+        "x": 2440,
+        "y": 940,
         "wires": [
             [
                 "166ec84d0479edca"
@@ -2195,10 +2235,9 @@
         "url": "/api/settings",
         "method": "get",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 640,
-        "y": 160,
+        "x": 980,
+        "y": 280,
         "wires": [
             [
                 "0b3b7672f6522f91"
@@ -2214,10 +2253,9 @@
         "url": "/api/settings",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 170,
-        "y": 920,
+        "x": 330,
+        "y": 1040,
         "wires": [
             [
                 "977de577e811690b"
@@ -2237,8 +2275,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 920,
+        "x": 800,
+        "y": 1040,
         "wires": [
             [
                 "ca2f6d1e9ece927b"
@@ -2261,8 +2299,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 160,
+        "x": 1210,
+        "y": 280,
         "wires": [
             [
                 "86b8ac629d80c35d"
@@ -2277,8 +2315,8 @@
         "name": "Settings GET Response",
         "statusCode": "",
         "headers": {},
-        "x": 1130,
-        "y": 160,
+        "x": 1470,
+        "y": 280,
         "wires": []
     },
     {
@@ -2290,8 +2328,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 410,
-        "y": 920,
+        "x": 570,
+        "y": 1040,
         "wires": [
             [
                 "1b3d7b866bb8db1a"
@@ -2306,8 +2344,8 @@
         "name": "Settings POST Response",
         "statusCode": "",
         "headers": {},
-        "x": 870,
-        "y": 900,
+        "x": 1030,
+        "y": 1020,
         "wires": []
     },
     {
@@ -2325,8 +2363,8 @@
         "correl": "",
         "expiry": "",
         "broker": "mqtt_broker_pi1",
-        "x": 880,
-        "y": 940,
+        "x": 1040,
+        "y": 1060,
         "wires": []
     },
     {
@@ -2336,8 +2374,8 @@
         "g": "2ceda20c5bfc9df6",
         "name": "Settings",
         "info": "",
-        "x": 620,
-        "y": 120,
+        "x": 960,
+        "y": 240,
         "wires": []
     },
     {
@@ -2347,8 +2385,8 @@
         "g": "76f49feef62a3798",
         "name": "Configure",
         "info": "",
-        "x": 140,
-        "y": 880,
+        "x": 300,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2364,8 +2402,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 1520,
+        "x": 750,
+        "y": 1680,
         "wires": [
             [
                 "4f64cea803c823d3"
@@ -2381,10 +2419,9 @@
         "url": "/api/live-feed",
         "method": "get",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 490,
-        "y": 1520,
+        "x": 510,
+        "y": 1680,
         "wires": [
             [
                 "b0cba382c50d09ab"
@@ -2399,8 +2436,8 @@
         "name": "Live Feed Response",
         "statusCode": "",
         "headers": {},
-        "x": 980,
-        "y": 1520,
+        "x": 1000,
+        "y": 1680,
         "wires": []
     },
     {
@@ -2410,8 +2447,8 @@
         "g": "ce7e83e4ad2de9f6",
         "name": "HTTP Read",
         "info": "",
-        "x": 470,
-        "y": 1480,
+        "x": 490,
+        "y": 1640,
         "wires": []
     },
     {
@@ -2424,8 +2461,8 @@
             "1ba6a00a59d90dd3",
             "25c59be20820f116"
         ],
-        "x": 95,
-        "y": 1480,
+        "x": 115,
+        "y": 1640,
         "wires": [
             [
                 "dedbe14c1df4bd31"
@@ -2445,8 +2482,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 1480,
+        "x": 260,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -2458,8 +2495,8 @@
         "g": "2dc032b30fb2cdf3",
         "name": "Event Storage",
         "info": "",
-        "x": 150,
-        "y": 1440,
+        "x": 170,
+        "y": 1600,
         "wires": []
     },
     {
@@ -2472,8 +2509,8 @@
         "links": [
             "9920a4a96963e478"
         ],
-        "x": 1955,
-        "y": 820,
+        "x": 2255,
+        "y": 880,
         "wires": []
     },
     {
@@ -2490,8 +2527,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 1340,
+        "x": 1260,
+        "y": 1500,
         "wires": []
     },
     {
@@ -2503,8 +2540,8 @@
         "links": [
             "f3b5737469a0ae23"
         ],
-        "x": 715,
-        "y": 1380,
+        "x": 735,
+        "y": 1540,
         "wires": [
             [
                 "a2e2b9722d48755b"
@@ -2521,8 +2558,8 @@
         "links": [
             "93a285a031db5877"
         ],
-        "x": 1955,
-        "y": 780,
+        "x": 2255,
+        "y": 840,
         "wires": []
     },
     {
@@ -2539,8 +2576,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
-        "y": 1300,
+        "x": 1070,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2552,10 +2589,9 @@
         "url": "/media/images/:filename",
         "method": "get",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 1580,
-        "y": 1120,
+        "x": 1620,
+        "y": 1320,
         "wires": [
             [
                 "fa89397cc634bc5a"
@@ -2575,8 +2611,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1840,
-        "y": 1120,
+        "x": 1880,
+        "y": 1320,
         "wires": [
             [
                 "7baa995010645c42"
@@ -2599,8 +2635,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2060,
-        "y": 1080,
+        "x": 2100,
+        "y": 1280,
         "wires": [
             [
                 "2c583a3f351f9514"
@@ -2620,8 +2656,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2280,
-        "y": 1080,
+        "x": 2320,
+        "y": 1280,
         "wires": [
             [
                 "fbd399cdde11bdfe"
@@ -2636,8 +2672,8 @@
         "name": "Image Response",
         "statusCode": "",
         "headers": {},
-        "x": 2510,
-        "y": 1120,
+        "x": 2550,
+        "y": 1320,
         "wires": []
     },
     {
@@ -2647,8 +2683,8 @@
         "g": "ddbc521e6b96d5b1",
         "name": "View Image",
         "info": "",
-        "x": 1530,
-        "y": 1080,
+        "x": 1570,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2662,8 +2698,8 @@
             "eccc694b470a9fd3"
         ],
         "uncaught": false,
-        "x": 1550,
-        "y": 1400,
+        "x": 1590,
+        "y": 1600,
         "wires": [
             [
                 "a95d6e9cb54b0e9e"
@@ -2683,8 +2719,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1800,
-        "y": 1400,
+        "x": 1840,
+        "y": 1600,
         "wires": [
             [
                 "dbb8f9c1e900f0d1"
@@ -2699,8 +2735,8 @@
         "name": "Media Error Response",
         "statusCode": "",
         "headers": {},
-        "x": 2060,
-        "y": 1400,
+        "x": 2100,
+        "y": 1600,
         "wires": []
     },
     {
@@ -2710,8 +2746,8 @@
         "g": "d6f33d740f37f66b",
         "name": "Catch Media Error",
         "info": "",
-        "x": 1550,
-        "y": 1360,
+        "x": 1590,
+        "y": 1560,
         "wires": []
     },
     {
@@ -2723,10 +2759,9 @@
         "url": "/media/videos/:filename",
         "method": "get",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 1580,
-        "y": 1260,
+        "x": 1620,
+        "y": 1460,
         "wires": [
             [
                 "a288150cbe49f92f"
@@ -2740,8 +2775,8 @@
         "g": "3053a935888cd15a",
         "name": "View Video",
         "info": "",
-        "x": 1520,
-        "y": 1220,
+        "x": 1560,
+        "y": 1420,
         "wires": []
     },
     {
@@ -2757,8 +2792,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1840,
-        "y": 1260,
+        "x": 1880,
+        "y": 1460,
         "wires": [
             [
                 "eccc694b470a9fd3"
@@ -2781,8 +2816,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2060,
-        "y": 1220,
+        "x": 2100,
+        "y": 1420,
         "wires": [
             [
                 "5df517086efdfe47"
@@ -2802,8 +2837,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2280,
-        "y": 1220,
+        "x": 2320,
+        "y": 1420,
         "wires": [
             [
                 "ba19471e9916b696"
@@ -2818,8 +2853,8 @@
         "name": "Video Response",
         "statusCode": "",
         "headers": {},
-        "x": 2500,
-        "y": 1260,
+        "x": 2540,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2829,8 +2864,169 @@
         "g": "9379380a7711d644",
         "name": "",
         "info": "",
-        "x": 1500,
-        "y": 1020,
+        "x": 1540,
+        "y": 1220,
         "wires": []
+    },
+    {
+        "id": "92ab57336f24a2b1",
+        "type": "function",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "name": "Launch Upload Service",
+        "func": "msg.payload = \"/home/pi/autoguard/upload_service.py\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "bc9c4ed65d645351"
+            ]
+        ]
+    },
+    {
+        "id": "bc9c4ed65d645351",
+        "type": "exec",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "command": "python3",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Cloud Upload",
+        "x": 450,
+        "y": 100,
+        "wires": [
+            [
+                "8665a853120955ad"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8665a853120955ad",
+        "type": "debug",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "name": "debug upload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ddbdb1ef343e5496",
+        "type": "function",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "name": "Launch Sync Service",
+        "func": "msg.payload = \"/home/pi/autoguard/sync_service.py\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "a0e2d66d6941a5fb"
+            ]
+        ]
+    },
+    {
+        "id": "a0e2d66d6941a5fb",
+        "type": "exec",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "command": "python3",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Run Cloud Sync",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "4ff4a31665e1aecb"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4ff4a31665e1aecb",
+        "type": "debug",
+        "z": "0e992f61a706eb58",
+        "g": "dfaa92d4dd849eab",
+        "name": "debug sync",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "81d22a8a4b08a54e",
+        "type": "catch",
+        "z": "0e992f61a706eb58",
+        "g": "7404463c72010353",
+        "name": "Catch Event Error",
+        "scope": [
+            "b5f96ecabad2153e"
+        ],
+        "uncaught": false,
+        "x": 280,
+        "y": 1460,
+        "wires": [
+            [
+                "ff48a20042e2d68a"
+            ]
+        ]
+    },
+    {
+        "id": "ff48a20042e2d68a",
+        "type": "function",
+        "z": "0e992f61a706eb58",
+        "g": "7404463c72010353",
+        "name": "Save Event locally",
+        "func": "/**\n * Save failed InfluxDB event to local queue for sync_service to retry.\n */\nconst fs = require(\"fs\");\nconst path = require(\"path\");\n\nconst queueDir = \"/home/pi/autoguard/queue/events\";\nif (!fs.existsSync(queueDir)) {\n    fs.mkdirSync(queueDir, { recursive: true });\n}\n\nconst event = {\n    measurement: msg.measurement,\n    tags: msg.tags || {},\n    fields: msg.payload || {},\n    timestamp: Date.now()\n};\n\nconst filename = `${event.timestamp}_${event.tags.intrusionId || \"unknown\"}.json`;\n\ntry {\n    fs.writeFileSync(\n        path.join(queueDir, filename),\n        JSON.stringify(event, null, 2)\n    );\n    node.warn(`Event queued locally: ${filename}`);\n} catch (e) {\n    node.error(`Failed to queue event: ${e.message}`);\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1460,
+        "wires": [
+            []
+        ]
     }
 ]
