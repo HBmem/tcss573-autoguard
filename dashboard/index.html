@@ -141,49 +141,164 @@
                 </section>
 
                 <section id="metricsView" class="d-none">
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-3">
-                            <div class="metric-card">
-                                <div class="small-label">Temperature</div>
-                                <div id="metricTemperature" class="metric-value">--</div>
-                                <div class="small-label">°C</div>
+                    <div class="panel-card mb-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                            <div>
+                                <h2 class="h5 mb-1">Sensor Metrics</h2>
+                                <div class="small-label">Switch between live sensor status and historical trends</div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="metric-card">
-                                <div class="small-label">Humidity</div>
-                                <div id="metricHumidity" class="metric-value">--</div>
-                                <div class="small-label">%</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="metric-card">
-                                <div class="small-label">Driver Seat Distance</div>
-                                <div id="metricDistance" class="metric-value">--</div>
-                                <div class="small-label">cm</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="metric-card">
-                                <div class="small-label">Acceleration Magnitude</div>
-                                <div id="metricAccel" class="metric-value">--</div>
-                                <div class="small-label">current</div>
+
+                            <div class="btn-group" role="group" aria-label="Metrics View Toggle">
+                                <button id="metricsCurrentToggle" type="button" class="btn btn-primary active">
+                                    Current Values
+                                </button>
+                                <button id="metricsTrendToggle" type="button" class="btn btn-outline-light">
+                                    Over Time
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="panel-card">
-                                <h2 class="h5 mb-3">Climate Trend</h2>
-                                <div id="climateChart" style="height: 320px;"></div>
+                    <div id="metricsCurrentView">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Temperature</h2>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div id="temperatureGauge" style="height: 260px; width: 260px;"></div>
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <div id="metricTemperature" class="metric-value">--</div>
+                                        <div class="small-label">°C</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Humidity</h2>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div id="humidityGauge" style="height: 260px; width: 260px;"></div>
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <div id="metricHumidity" class="metric-value">--</div>
+                                        <div class="small-label">%</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
-                            <div class="panel-card">
-                                <h2 class="h5 mb-3">Security Sensor Trend</h2>
-                                <div id="securityChart" style="height: 320px;"></div>
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="metric-card h-100">
+                                    <div class="small-label mb-2">Driver Seat Distance</div>
+                                    <div id="metricDistance" class="metric-value">--</div>
+                                    <div class="small-label mb-2">Current Distance (cm)</div>
+
+                                    <div class="mt-3">
+                                        <div class="small-label">Initial Captured Distance</div>
+                                        <div id="metricDistanceInitial" class="fs-5 fw-semibold">--</div>
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <div class="small-label">Baseline Captured At</div>
+                                        <div id="metricDistanceCapturedAt" class="fs-6">--</div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <div class="small-label">Difference</div>
+                                        <div id="metricDistanceDelta" class="fs-5 fw-semibold">--</div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <span id="metricDistanceDirection" class="badge text-bg-secondary status-chip">
+                                            Waiting for baseline
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="metric-card h-100">
+                                    <div class="small-label mb-2">Door Acceleration</div>
+                                    <div id="metricAccel" class="metric-value">--</div>
+                                    <div class="small-label mb-3">Acceleration Magnitude</div>
+
+                                    <div class="display-3 text-center mb-2" id="metricAccelArrow">•</div>
+
+                                    <div class="text-center mb-2">
+                                        <span id="metricAccelDirection" class="badge text-bg-secondary status-chip">
+                                            Direction Unknown
+                                        </span>
+                                    </div>
+
+                                    <div class="small-label text-center" id="metricAccelVector">
+                                        X: -- | Y: -- | Z: --
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="metric-card h-100">
+                                    <div class="small-label mb-2">Window Vibration</div>
+                                    <div id="metricVibration" class="metric-value">--</div>
+                                    <div class="small-label mb-3">Current Vibration</div>
+
+                                    <div class="mt-3">
+                                        <div class="small-label">Previous Reading</div>
+                                        <div id="metricVibrationPrevious" class="fs-5 fw-semibold">--</div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <div class="small-label">Change</div>
+                                        <div id="metricVibrationDelta" class="fs-5 fw-semibold">--</div>
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <span id="metricVibrationState" class="badge text-bg-secondary status-chip">
+                                            Stable
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="metricsTrendView" class="d-none">
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Temperature Over Time</h2>
+                                    <div id="temperatureTrendChart" style="height: 280px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Humidity Over Time</h2>
+                                    <div id="humidityTrendChart" style="height: 280px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Distance Over Time</h2>
+                                    <div id="distanceTrendChart" style="height: 280px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Acceleration Over Time</h2>
+                                    <div id="accelTrendChart" style="height: 280px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="panel-card">
+                                    <h2 class="h5 mb-3">Vibration Over Time</h2>
+                                    <div id="vibrationTrendChart" style="height: 300px;"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
