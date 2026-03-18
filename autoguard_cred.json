@@ -1,7 +1,3 @@
 {
-    "mqtt_broker_pi1": {},
-    "influx_cfg_pi1": {
-        "token": "skaiDcUw-OErlQJtR62cBYf4NutzBZG3hDErvvg9QKycISe5oY4IvZHOtTu0liaHfSPdkFX1CzsDqHLKZVXpog=="
-    },
-    "b7bc8d757e62072b": {}
+    "$": "0f947070a126f03ce126c1aaa83d0631Nkzs6zq2H3ZiLhTFPWQNB0KFnEsIaFlp4EhQFeyHR6I/pOqSdfgts/XoTmq2FyY0JLbT3DuT0yYF6ZnADu1wKGwlj+t+mWqszJL2PKij31++V3QiKtFhnnuFVivydL/qTmC8kUFmM8JUfhiXr7l5Qbuf7hY/u5NJO3ZgeYmAXHdzITTMRIclU3PFoNw="
 }
